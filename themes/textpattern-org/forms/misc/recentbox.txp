@@ -1,0 +1,9 @@
+<div id="recentbox" class="box">
+		<txp:zem_ir group="box">Articles</txp:zem_ir>
+<form action="">
+<select onchange="document.location=options[selectedIndex].value;">
+<option value="" selected="selected">Recently Posted &darr;</option>
+<txp:article_custom form="@dropdown" limit="20"" />
+</select>
+</form>
+		</div><!-- #recentbox -->

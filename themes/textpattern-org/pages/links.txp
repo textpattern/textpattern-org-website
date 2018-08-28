@@ -1,0 +1,188 @@
+<txp:output_form form="head" />
+<body id="top">
+<txp:output_form form="inbody" />
+
+<div id="links">
+<div id="s<txp:section />page">
+<div id="inbody">
+<div id="frame">
+
+<div id="container">
+
+<txp:output_form form="header" />
+<txp:output_form form="accessibility" />
+<txp:output_form form="mainnav" />
+<txp:output_form form="window" />
+
+<txp:output_form form="breadcrumbs" />
+
+<div id="col1">
+	<div class="incol">
+
+<txp:output_form form="search" />
+
+
+
+<txp:if_section name="comments">
+<div id="helpbox" class="box">
+<txp:zem_ir group="box">Relevant</txp:zem_ir>
+<ul class="boxlist">
+<li><a href="<txp:site_url />categoryarchive/?c=comments">Comments-related entries</a></li>
+<li><txp:ajw_comments_feed_link sitewide="y" label="Subscribe to RSS feed" /> of all comments</li>
+<li>Cool commenters have gravatars.  Get a <span class="em"><a href="http://gravatar.com">Gravatar</a></li>
+</ul><!-- .boxlist -->
+</div>
+<!-- #helpbox -->
+
+
+
+<txp:zem_ir group="box">Most-commented articles</txp:zem_ir>
+<div class="box">
+<ul class="boxlist">
+<txp:dru_chatometer break="li" limit="10" />
+</ul>
+</div>
+
+</txp:if_section>
+
+<txp:if_section name="links">
+<txp:output_form form="mainlinks" />
+</txp:if_section>
+
+<txp:if_section name="tags">
+<div id="helpbox" class="box">
+<txp:zem_ir group="box">Tags ?</txp:zem_ir>
+<ul class="boxlist">
+<li><a href="<txp:site_url />help#a688">What are tags?</a></li>
+<li><a href="<txp:site_url />help#a688">What's a tag cloud?</a></li>
+<li><a href="<txp:site_url />help#a689">How are these clouds generated?</a></li>
+<li><a href="<txp:site_url />help#a705">How do you tag articles?</a></li>
+<li><a href="<txp:site_url />categoryarchive?c=keywordstags">keywords/tags category archive.</a></li>
+</ul>
+</li>
+</ul>
+		</div><!-- #helpbox -->
+</txp:if_section>
+
+	</div><!-- .incol -->
+</div><!-- #col1 -->
+
+<div id="maincol">
+	<div class="incol">
+	<div id="content">
+<txp:if_section name="comments">
+<txp:zem_ir group="box" wrap="0">Recent comments</txp:zem_ir>
+<txp:asv_recent_comments form="commentspage" limit="50" wraptag="ol" />
+</txp:if_section>
+
+<txp:if_section name="register">
+<div id="registerpage">
+<txp:zem_ir group="box">Register</txp:zem_ir>
+<p>Register to post and edit your own articles at Textpattern Resources.</p>
+<p>Self-registering temporarily disabled. Ask for a login on the <a href="http://forum.textpattern.com/">Textpattern forum</a></p>
+<txp:hide>
+<p class="note">Your email address will <strong>not</strong> be sold or shared with anyone.</p>
+<div id="registrationform">
+<div class="regform">
+<txp:mem_self_register_form namewarn="please enter your name" userwarn="choose a new username" emailwarn="you need an email address to register" />
+</div><!-- .regform -->
+</div><!-- #registrationform -->
+</txp:hide>
+
+<p class="login">If you are already registered, please <a href="/textpattern">login</a>.</p>
+</div><!-- #registerpage -->
+</txp:if_section>
+
+<txp:if_section name="links">
+<div id="linklist" class="box">
+	<txp:zem_ir group="box">Links list</txp:zem_ir>
+	<ul class="boxlist archive">
+		<li style="display:none;">&nbsp; <txp:linklist form="links" limit="9999" wraptag="ul" sort="category asc, linkname asc" />
+		</li>
+	</ul><!-- .boxlist -->
+</div><!-- #linklist -->
+</txp:if_section>
+
+<txp:if_section name="tags">
+
+<div id="tagclouds">
+
+<txp:tru_tags_if_tag_search>
+tag: <h3 class="inline"><txp:tru_tags_tag_parameter /></h3>
+
+<txp:else />
+<txp:zem_ir group="box">Keywords cloud</txp:zem_ir>
+</txp:tru_tags_if_tag_search>
+
+<txp:tru_tags_if_tag_search>
+<div class="tagsearch">
+<div class="tags" style="padding-bottom:15px;margin-bottom:15px;">
+<txp:else />
+<div class="tags">
+</txp:tru_tags_if_tag_search>
+
+<txp:tru_tags_handler section="mods,plugins,tips,tutorials,templates" break="" minpercent="75" maxpercent="230" listform="@titles" allowoverride="0" limit="999999" /></div>
+
+
+
+<txp:tru_tags_if_tag_search>
+</div><!-- .tagsearch -->
+</txp:tru_tags_if_tag_search>
+
+
+</div><!-- #tagclouds -->
+
+</txp:if_section>
+
+	</div><!-- #content -->
+	</div><!-- .incol -->
+</div><!-- #maincol -->
+
+<!-- col2 -->
+	<div id="col2">
+	<div class="incol">
+
+
+<txp:if_section name="comments">
+
+<txp:zem_ir group="box">No comments yet</txp:zem_ir>
+<div class="box">
+<ul class="boxlist">
+<txp:asv_random_article form="titlelist_simple" limit="20" />
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+<txp:else />
+<txp:zem_ir group="box">Category cloud</txp:zem_ir>
+<div class="tags"><txp:rss_category_cloud break="" wraptag="" /></div>
+</txp:if_section>
+
+
+
+
+	</div><!-- .incol -->
+	</div><!-- #col2 -->
+
+
+<txp:output_form form="footer" />
+
+</div><!-- #container -->
+
+<txp:output_form form="base" />
+
+</div><!-- #frame -->
+
+</div><!-- #inbody -->
+</div><!-- #ssectionpage -->
+</div><!-- #links -->
+<txp:output_form form="all_bottom" />
+</body>
+</html>

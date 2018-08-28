@@ -1,0 +1,31 @@
+<txp:if_individual_article>
+
+<txp:zem_ir group="box">Browse</txp:zem_ir>
+<div class="anav"><span class="1"><txp:link_to_prev showalways="y">&larr; <txp:prev_title /></txp:link_to_prev></span>
+<span class="2"><txp:link_to_next showalways="y"><txp:next_title /> &rarr;</txp:link_to_next></span></div>
+
+
+<div id="relatedarticles" class="box">
+		<txp:zem_ir group="box">Possibly Related</txp:zem_ir>
+			<div class="inbox">
+
+<ul><txp:chh_related_articles relation="category,custom_2,author" section="plugins,mods,tutorials,templates,tips" children="y" excerpted="n" limit="10" form="titlelist" /></ul>
+			</div><!-- .inbox -->
+		</div><!-- #relatedarticles -->
+
+<txp:anc_hide>		<div id="helpbox" class="box">
+		<h3><a href="<txp:site_url />help">Help  <span class="helpnote">[ ? ]</span></a></h3>
+<ul class="boxlist">
+	<li>How to <a href="<txp:site_url />help#">install plugins</a></li>
+</ul>
+		</div><!-- #helpbox --></txp:anc_hide>
+
+
+<txp:output_form form="catbox" />
+	<txp:output_form form="recentbox" />
+
+
+<div class="randomnote">
+There are also <a href="<txp:site_url />tags">tag clouds</a>, 'cause those are fun.</div><!-- .randomnote -->
+
+</txp:if_individual_article>

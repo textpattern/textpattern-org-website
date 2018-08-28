@@ -1,0 +1,13 @@
+<txp:if_different></ul></li>
+<li class="a"><h2 class="stat"><txp:link_category /></h2>
+<ul></txp:if_different>
+
+
+<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth>
+<txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth>
+
+<txp:linkdesctitle /><br />
+<txp:link_description /><br />
+
+
+</li>

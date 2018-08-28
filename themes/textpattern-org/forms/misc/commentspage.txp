@@ -1,0 +1,7 @@
+<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth><txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth>
+<div class="clatitle"><txp:permlink><txp:title /></txp:permlink></div>
+	<txp:cbs_gravatar size="44" class="gravatar" link="true" /> <div class="clcmessage"><txp:asv_message striptags="y" maxwords="50" wraptag="p" /></div>
+<span class="clcfoot"><span class="clcauthor">~<txp:comment_name link="1" /></span> <span class="clcposted">at <txp:comment_permlink><txp:comment_time format="%H:%M %p, %d %B" /></txp:comment_permlink></span></span>
+</li>
+
+

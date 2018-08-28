@@ -1,0 +1,20 @@
+<table>
+<tr>
+	<td>Full Name</td>
+	<td><txp:mem_name_input /></td>
+	<td><txp:mem_name_warn /></td>
+</tr>
+<tr>
+	<td>Username</td>
+	<td><txp:mem_user_input /></td>
+	<td><txp:mem_user_warn /></td>
+</tr>
+<tr>
+	<td>Email</td>
+	<td><txp:mem_email_input /></td>
+	<td><txp:mem_email_warn /></td>
+</tr>
+<tr>
+	<td colspan="3"><txp:mem_submit /></td>
+</tr>
+</table>

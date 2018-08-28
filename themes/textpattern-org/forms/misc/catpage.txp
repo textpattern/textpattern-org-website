@@ -1,0 +1,25 @@
+<div id="articlelisting" class="box">
+<txp:article limit="10" />
+
+<txp:rvm_if expr="numpages!='1'">
+<div id="pagination">
+
+<div class="acol1">
+<txp:zem_ir group="box">Pagination</txp:zem_ir>
+<p><txp:mdn_count category="#" section="#"/> articles</p>
+</div><!-- .acol1 -->
+
+
+<div class="acol2">
+
+<txp:output_form form="gnav" />
+
+</div><!-- .acol2 -->
+
+</div><!-- #pagination -->
+</txp:rvm_if>
+
+<div class="archiveoffer acol2">
+All <txp:mdn_count section="mods,plugins,templates,tips,tutorials" /> articles are stored in the treasure rooms that are the <a href="<txp:site_url />archives">Archives</a>.</div><!-- .archiveoffer -->
+
+</div><!-- #articlelisting -->

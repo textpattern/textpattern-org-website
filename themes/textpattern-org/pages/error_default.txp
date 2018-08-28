@@ -1,0 +1,36 @@
+<txp:output_form form="head" />
+<body id="top">
+<txp:output_form form="inbody" />
+<div id="error">
+<txp:if_individual_article><div id="indipage><txp:else /><div id="listpage></txp:if_individual_article>
+<div id="inbody">
+<div id="frame">
+
+<div id="container">
+
+<txp:output_form form="header" />
+<txp:output_form form="accessibility" />
+<txp:output_form form="mainnav" />
+<txp:output_form form="window" />
+
+
+	<div id="content" style="text-align:center;">
+		<h3 style="font: 1.3em Georgia, Times, serif;"><txp:error_status /></h3>
+		<p><txp:error_message /></p>
+	</div><!-- #content -->
+
+
+<txp:output_form form="footer" />
+
+</div><!-- #container -->
+
+<txp:output_form form="base" />
+
+</div><!-- #frame -->
+
+</div><!-- #inbody -->
+</div><!-- #error -->
+</div><!-- #about -->
+<txp:output_form form="all_bottom" />
+</body>
+</html>

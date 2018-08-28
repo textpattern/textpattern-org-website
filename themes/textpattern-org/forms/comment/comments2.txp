@@ -1,0 +1,73 @@
+<txp:if_section name="about,notices,misc,help,admin,contact"><txp:else />
+		<div class="acol1"><txp:output_form form="social" />
+	</div><!-- .acol1 -->
+
+</txp:if_section>
+
+	<div id="comments">
+		<txp:anc_hide><div class="acol1"><txp:zem_ir group="box">Comments</txp:zem_ir></div><!-- .acol1 --></txp:anc_hide>
+
+			<txp:if_section name="about,notices,misc,help,admin">
+		<div class="acol2">
+				<txp:output_form form="social" />
+		</div><!-- .acol2 -->
+			</txp:if_section>
+			<txp:if_section name="plugins,templates,tutorials,tips,mods">
+		<div class="acol2">
+				<div class="p">
+
+<txp:rvm_if expr="custom_3 or custom_7">
+<p>
+<txp:rvm_if2 expr="custom_3 and custom_7">
+If there is a comment form at the <a href="<txp:rei_show_custom customid="3" />">Information URL</a>, you may want to leave your comments/questions there or at the <a href="<txp:rei_show_custom customid="7" />">Forum thread</a> for quicker feedback. 
+</txp:rvm_if2>
+
+<txp:rvm_if3 expr="custom_3 and !custom_7">
+If there is a comment form at the <a href="<txp:rei_show_custom customid="3" />">Information URL</a>, you may want to leave your comments/questions there for quicker feedback. 
+</txp:rvm_if3>
+
+<txp:rvm_if4 expr="!custom_3 and custom_7">
+You may want to leave your comments/questions at the <a href="<txp:rei_show_custom customid="7" />">Forum thread</a> for quicker feedback. 
+</txp:rvm_if4>
+
+ Otherwise, comment away:</p>
+ <txp:else />
+ 
+ <p>Comments/questions?  Leave a message in the form.</p>
+ 
+</txp:rvm_if>
+
+</div>
+		</div><!-- .acol2 -->
+			</txp:if_section>
+
+
+		<div class="acol1">
+			<div id="commentform">
+				<txp:comments_form isize="25" form="commentform" msgcols="25" msgrows="6" wraptag="div" show_preview="0" /></div><!-- #commentform -->
+		</div><!-- .acol1 -->
+
+		<div class="acol2">
+
+
+
+
+
+		<div id="thecomments">
+			<txp:glx_if_comments_count operator="greater_than" value="0"><txp:zem_ir group="box" wrap="0">Commented (<txp:comments_count />)</txp:zem_ir></txp:glx_if_comments_count>
+			
+<txp:if_comments_preview>
+<txp:zem_ir group="box" wrap="0">Preview of your comment</txp:zem_ir>
+<txp:comments_preview /></txp:if_comments_preview>
+
+			<txp:comments form="comments"/>
+
+		</div> <!-- #thecomments -->
+
+		<p><span class="em">Subscribe</span> to this article's <txp:ajw_comments_feed_link label="comments RSS feed" />. <span class="helpnote"><a href="<txp:site_url />help#a690">[ ? ]</a></span> &nbsp;  View <span class="em"><txp:zem_link href="/comments">Recent Comments</txp:zem_link></span> across the site.
+
+		<txp:glx_if_comments_count operator="greater_than" value="4">
+			<p>Would you care to <a href="#commentform">write a comment</a><txp:mdn_if_custom field="7" notempty="1"> or visit the <a href="<txp:rei_show_custom customid="7" />">forum discussion</a></txp:mdn_if_custom>?</p></txp:glx_if_comments_count>
+		</div><!-- .acol2 -->
+
+	</div><!-- #comments -->

@@ -1,0 +1,9 @@
+<a href="http://textpattern.org/help#a943">Reason <span class="helpnote">[ ? ]</span></a><br />
+<txp:zem_contact_textarea rows="2" required="1" break="" label="" />
+
+<txp:zem_contact_secret label="Edit link">
+http://textpattern.org/textpattern/index.php?event=article&step=edit&ID=<txp:article_id />
+<txp:title />
+</txp:zem_contact_secret>
+
+<txp:zem_contact_submit>Flag</txp:zem_contact_submit>

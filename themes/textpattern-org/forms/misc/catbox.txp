@@ -1,0 +1,3 @@
+		<div id="catbox" class="box">
+<txp:popup type="c" label="<h3>Categories</h3>" />
+		</div><!-- #catbox -->

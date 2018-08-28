@@ -1,0 +1,15 @@
+	<div id="header">
+
+
+
+<h1><a href="<txp:site_url />"><txp:zem_ir font="BAARS.ttf" class="" fontsize="32" color="#111" padding="10" wraptag="h1" position="center" text="Textpattern Resources" method="img"/> 
+
+<span><img src="/images/zir/bff073601ea3dc090309165551e2efd8.png" alt="at" /></span> 
+
+		<txp:zem_ir font="GothamNights.ttf" fontsize="36" color="#111" padding="10" wraptag="h1" text="textpattern.org" method="img"/></a></h1>
+
+		
+		<div id="tag"><txp:zem_ir font="BAARS.ttf" fontsize="12" position="center" wraptag="div"><txp:site_slogan /></txp:zem_ir></div>
+
+	</div><!-- #header -->
+

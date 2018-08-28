@@ -1,0 +1,3 @@
+<div id="base">
+Published with <a id="bottom" href="http://textpattern.com" title="Published with Textpattern CMS">Textpattern</a> <txp:anc_hide>&middot; 
+<a href="http://joyent.com/" title="Hosted at Joyent">Joyent</a></div></txp:anc_hide><!-- #base -->

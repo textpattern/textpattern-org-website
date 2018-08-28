@@ -1,0 +1,264 @@
+<txp:output_form form="head" />
+<body id="top">
+<txp:output_form form="inbody" />
+<div id="archive">
+<div id="inbody">
+<div id="frame">
+
+<div id="container">
+
+<txp:output_form form="header" />
+<txp:output_form form="accessibility" />
+<txp:output_form form="mainnav" />
+<txp:output_form form="window" />
+
+
+<txp:output_form form="breadcrumbs" />
+
+<div id="col1">
+	<div class="incol">
+
+
+<txp:output_form form="search" />
+
+<div id="archiveoptions" class="box">
+	<txp:zem_ir group="box">Directory flavors</txp:zem_ir>
+
+		<ul>
+			<li class="a inbox">List:
+			<ul>
+				<li class="b"><a href="/archives">Section</a></li>
+				<li class="a"><a href="/categoryarchive">Category</a></li>
+				<li class="b"><a href="/authorarchive">Author</a></li>
+				<li class="a"><a href="/datearchive">Date</a></li>
+<txp:hide><li class="b"><a href="#">Popularity</a></li></txp:hide>
+			</ul>
+			</li>
+
+			<li class="a inbox">More archive lists:
+			<ul>
+				<li class="b"><a href="/tags">Tags/keywords</a></li>
+				<li class="a"><a href="/state#archived">Archived</a>
+				<li class="b"><a href="/state#orphaned">Orphaned</a></li>
+				</li>
+			</ul>
+			</li>
+
+<txp:hide>			<li class="a inbox">Live Archive:
+			<ul>
+				<li class="b"><a href="#">Section &gt; category</a></li>
+				<li class="a"><a href="#">Category &gt; section</a></li>
+				<li class="b"><a href="#">Date-based</a></li>
+			</ul>
+			</li>
+
+
+
+			<li class="a inbox">Calendar:
+			<ul>
+				<li class="b"><a href="#">Monthly calendar</a></li>
+				<li class="a"><a href="#">Yearly calendar</a></li>
+			</ul>
+			</li></txp:hide>
+
+		</ul>
+		</div><!-- #archiveoptions -->
+
+
+
+
+<txp:hide> 
+		<div id="helpbox" class="box">
+
+<txp:zem_ir group="box"><a href="/help">Help</a> </txp:zem_ir>
+
+<ul class="boxlist">
+<li>Category <a href="#">definitions</a> list</li>
+<li>Installation <a href="<txp:site_url />help#a360">instructions</a></li>
+</ul>
+		</div><!-- #helpbox --></txp:hide>
+
+
+
+	<txp:output_form form="recentbox" />
+
+
+
+<div id="helpbox" class="box">
+<p>Please help us locate orphaned plugins and identify/repair broken links.</p>
+
+<p>When reporting broken links, whether via the <a href="/contact">contact form</a> or by <txp:zem_link href="943">flagging</txp:zem_link> an article, please provide the URL to the page on Textpattern Resources with the broken link(s), and provide the correct URL if known.</p>
+		</div><!-- #helpbox -->
+
+
+
+	</div><!-- .incol -->
+</div><!-- #col1 -->
+
+<!-- content -->
+<div id="maincol">
+	<div class="incol">
+	<div id="content">
+
+
+
+
+
+<txp:if_section name="state">
+
+<span id="orphaned">
+<txp:zem_ir group="box" wrap="500">Orphaned</txp:zem_ir>
+
+<div class="archive archivestate">
+
+<div class="note">Links to the files of these articles are broken.  If you can locate a copy, please <txp:email email="admin@textpattern.org" linktext="submit it" title="save the orphans" />.</div>
+<ul><txp:rvm_article_custom form="aorphaned" limit="999999" section="mods,plugins,templates,tips,tutorials" /></ul>
+
+</div><!-- .archive -->
+</span><!-- #orphaned -->
+
+
+<div class="jump"><a href="#top">hop to #top / Directory menu</a></div>
+
+
+
+<span id="archived">
+<txp:zem_ir group="box" wrap="500">Archived</txp:zem_ir>
+
+<div class="archive archivestate">
+
+<div class="note">Archived articles <a href="/help#a910" class="helpnote">[?]</a> are those whose contents' functionality may be outdated.</div>
+<ul><txp:rvm_article_custom form="aarchived" limit="999999" section="mods,plugins,templates,tips,tutorials" /></ul>
+
+</div><!-- .archive -->
+</span><!-- #archived -->
+
+
+
+<div class="jump"><a href="#top">hop to #top / Directory menu</a></div>
+
+
+</txp:if_section><!-- if section state -->
+
+
+
+
+
+
+<txp:if_section name="archives">
+<txp:zem_ir group="box" wrap="500">Section-ordered list</txp:zem_ir>
+
+<div class="archive">
+
+<txp:php>
+  $sections = 'mods,plugins,templates,tips,tutorials';
+  $section = in_list(gps('section'), $sections) ? gps('section') : $sections;
+#  echo '<h2 id="mods_archive"><a href="'.site_url(array()).$section.'">Mods <span>('.mdn_count(array('section' => $section)).')</span></a></h2>';
+  echo '<ul>';
+  echo rvm_article_custom(array('section' => $section, 'form' => '^archivelist', 'limit' => '9999', 'sort' => 'Section ASC, Title ASC')) .
+  '</ul>';
+</txp:php>
+</div>
+<div class="jump"><a href="#top">hop to #top / Directory menu</a></div>
+
+</txp:if_section><!-- if archives -->
+
+<txp:if_section name="categoryarchive">
+<txp:zem_ir group="box" wrap="500">Category-ordered list</txp:zem_ir>
+<div id="categoryarchive">
+<div class="archivebycat">
+
+
+<txp:hide>
+<txp:chh_article_custom section="mods,plugins,templates,tips,tutorials" sortby="Category1,Category2,Section,Title" form="archivecatlist"  wraptag="ul" />
+</txp:hide>
+
+<txp:rss_suparchive_bycat section="mods,plugins,templates,tips,tutorials" showheader="0" showmenu="0" showcats="1" showcatcount="1" showsections="1" showsectioncount="1" showjump="1" jumplabel="# hop to top / Directory menu" showcommentscount="1" showzerocount="0" countprefix=" [" countsuffix="]" form="archivecatlist" linktosection="" formwraptag="ul" sort="section,title ASC" />
+</div><!-- .archivebycat -->
+</div><!-- #categoryarchive -->
+
+<div class="jump"><a href="#top">hop to #top / Directory menu</a></div>
+<br clear="both" />
+
+<!-- <txp:article form="blank" limit="1" /> -->
+</txp:if_section><!-- if categoryarchive -->
+
+<txp:if_section name="authorarchive">
+<txp:zem_ir group="box" wrap="500">List by Author name</txp:zem_ir>
+
+<div class="archive authorarchivelist">
+
+<txp:rvm_article_custom section="mods,plugins,templates,tips,tutorials" form="authorarchive" sort="AuthorID,custom_2,Title" limit="9999" />
+
+</div><!-- .archive -->
+
+<txp:newer>&lt;&lt;  </txp:newer>
+<txp:older>  &gt;&gt;</txp:older>
+
+
+</txp:if_section><!-- /if authorarchive -->
+
+
+<txp:if_section name="datearchive">
+<txp:zem_ir group="box" wrap="500">Date-ordered list (when article was posted to site)</txp:zem_ir>
+
+<div class="archive"><txp:rss_suparchive dateformat="%B %Y" showcats="1" catstart="" catsep="" addbreak="0" showsubdate="1" subdateformat="%d" subdatesep=" &middot; " section="mods,plugins,templates,tips,tutorials" showcommentscount="1" showzerocount="0" countprefix=" [" countsuffix="]" />
+
+<txp:hide><ul><txp:rss_suparchive section="mods,plugins,templates,tips,tutorials" limit="99999" /></ul></txp:hide>
+
+</div><!-- .archive -->
+
+</txp:if_section><!-- if datearchive -->
+
+	</div><!-- #content -->
+
+
+	</div><!-- .incol -->
+</div><!-- #maincol -->
+
+
+<!-- col1 -->
+
+
+<!-- col2 -->
+	<div id="col2">
+	<div class="incol">
+
+
+
+		<div id="sectlist" class="box">
+		<div class="wraphb"><txp:zem_ir group="boxar">by Section</txp:zem_ir></div>
+		<ul>
+<li><a href="<txp:site_url />archives/?section=mods">Mods <span>(<txp:mdn_count section="mods" />)</span></a></li>
+<li><a href="<txp:site_url />archives/?section=plugins">Plugins <span>(<txp:mdn_count section="plugins" />)</span></a></li>
+<li><a href="<txp:site_url />archives/?section=templates">Templates <span>(<txp:mdn_count section="templates" />)</span></a></li>
+<li><a href="<txp:site_url />archives/?section=tips">Tips <span>(<txp:mdn_count section="tips" />)</span></a></li>
+<li><a href="<txp:site_url />archives/?section=tutorials">Tutorials <span>(<txp:mdn_count section="tutorials" />)</span></a></li>
+		</ul>
+		</div><!-- #sectlist -->
+
+
+<txp:output_form form="catlist" />
+
+<txp:if_category>
+<txp:output_form form="catlist" />
+</txp:if_category>
+
+	</div><!-- .incol -->
+	</div><!-- #col2 -->
+
+
+
+<txp:output_form form="footer" />
+
+</div><!-- #container -->
+
+<txp:output_form form="base" />
+
+</div><!-- #frame -->
+
+</div><!-- #inbody -->
+</div><!-- #archive -->
+<txp:output_form form="all_bottom" />
+</body>
+</html>

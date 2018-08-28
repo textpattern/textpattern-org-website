@@ -1,0 +1,76 @@
+<txp:output_form form="head" />
+	<body id="top">
+		<txp:output_form form="inbody" />
+		<div id="help">
+			<txp:if_individual_article><div id="indipage"><txp:else /><div id="listpage"></txp:if_individual_article>
+		<div id="inbody">
+		<div id="frame">
+		<div id="container">
+			<txp:output_form form="header" />
+			<txp:output_form form="accessibility" />
+			<txp:output_form form="mainnav" />
+			<txp:output_form form="window" />
+			<txp:output_form form="breadcrumbs" />
+		<div id="maincol">
+			<div class="incol">
+				<div id="content">
+					<txp:if_article_list>
+						<div id="answersbox" class="box acol1">
+							<txp:zem_ir group="box">More Answers</txp:zem_ir>
+							<p>If there's a question / answer that isn't here, and you feel it should be, please do <a href="#a678">submit it via the Q/A form</a> below or through <txp:email email="admin@textpattern.org" linktext="email" title="contact us" />, so we can get it up here.  We would like to hear from you about improving existing articles.</p>
+<p>The <a href="http://textpattern.com/faq/">Textpattern FAQ</a> answers many key questions about using Textpattern.</p>
+<p>Also make sure to check out <a href="http://textpattern.net/">TextBook</a>, the Textpattern Wiki.  If the documentation is not already there, please consider contributing to improve our community Textpattern references.</p>
+						</div><!-- #answersbox -->
+					</txp:if_article_list>
+					<txp:if_article_list>
+						<div class="acol2">
+						<h2 class="em">Help</h2>
+						</div>
+					</txp:if_article_list>
+				<div id="helpmenu">
+					<txp:if_individual_article>
+						<h2><a href="<txp:site_url />help">&larr; Go to that helpful Help menu whenever you'd like</a></h2>
+						<ul class="boxlist">
+					</txp:if_individual_article>
+					<txp:if_article_list>
+						<h2 class="stat">Let the answering begin.</h2>
+						<ul class="boxlist">
+						<li style="display:none;">&nbsp; <ul><txp:article form="helpmenu" allowoverride="0" sort="custom_3,custom_1" limit="9999" />
+						</ul></li>
+						<li><a href="#a678">Submit a new question / answer through the Q/A form</a></li>
+					<txp:else />
+						<li style="display:block;"><a href="<txp:site_url />help/678">You're also welcome to submit new questions / answers through the Q/A form</a></li>
+					</txp:if_article_list>
+							</ul><!-- .boxlist -->
+				</div><!-- #helpmenu -->
+				<txp:article form="help" allowoverride="0" sort="custom_3,custom_1,Title" limit="999" />
+				<txp:if_article_list>
+					<txp:article id="678" form="help" allowoverride="0" />
+				</txp:if_article_list>
+			<div class="acol2">
+				<div class="archiveoffer">You know you want to visit the <a href="<txp:site_url />archives">Archives</a>.</div>
+			</div><!-- .col2 -->
+		</div><!-- #content -->
+	</div><!-- .incol -->
+</div><!-- #maincol -->
+
+<div id="col2">
+	<div class="incol">
+		<txp:output_form form="search" />
+		<txp:output_form form="mainlinks" />
+	</div><!-- .incol -->
+</div><!-- #col2 -->
+
+<txp:output_form form="footer" />
+</div><!-- #container -->
+
+<txp:output_form form="base" />
+
+</div><!-- #frame -->
+
+</div><!-- #inbody -->
+</div><!-- #indipage or #listpage -->
+</div><!-- #help -->
+<txp:output_form form="all_bottom" />
+</body>
+</html>

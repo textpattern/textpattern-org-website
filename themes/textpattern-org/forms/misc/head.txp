@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Textpattern plugins repository and resource site; content for and by the Textpattern Community.">
+	<meta name="keywords" content="Textpattern, CMS, resources, plugins">
+	<txp:if_individual_article><txp:meta_keywords /></txp:if_individual_article>
+	<meta name="author" content="Alicson">
+	<meta name="generator" content="Textpattern CMS">
+	<title><txp:page_title /></title>
+<txp:if_section name="article,tips,mods,templates,plugins,tutorials">
+
+
+<script type="text/javascript" src="/textpattern/jquery.js"></script>
+
+<script type="text/javascript" src="/js/wlk_helpful.js"></script></txp:if_section>
+
+<link rel="alternate" type="application/rss+xml" title="Textpattern Resources RSS Feed" href="<txp:ajw_clean_feed_link url_only="y" sitewide="y" />" />
+<link rel="alternate" type="application/atom+xml" title="Textpattern Resources Atom Feed" href="<txp:ajw_clean_feed_link url_only="y" sitewide="y" flavor="atom" />" />
+
+<txp:anc_hide><txp:feed_link flavor="atom" format="link" label="Atom" />
+	<txp:feed_link flavor="rss" format="link" label="RSS" /></txp:anc_hide>
+ 
+	<txp:rvm_css format="link" />
+</head>

@@ -1,0 +1,3 @@
+<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth>
+<txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth>
+<txp:permlink><txp:title /></txp:permlink></li>

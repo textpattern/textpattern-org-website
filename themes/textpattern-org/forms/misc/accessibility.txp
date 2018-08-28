@@ -1,0 +1,9 @@
+<!-- accessibility -->
+<div id="accessibility">
+	<ul>
+		<li><a href="#content">Go to content</a></li>
+		<li><a href="#welcome">Go to welcome information</a></li>
+		<li><a href="#search">Go to search</a></li>
+		<li><a href="#footer">Go to footer</a></li>
+	</ul>
+</div>

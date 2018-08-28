@@ -1,0 +1,13 @@
+  <txp:article_custom id="694" allowoverride="0" form="subarticle" />
+
+  <txp:article_custom id="695" allowoverride="0" form="subarticle" />
+
+  <txp:article_custom id="700" allowoverride="0" form="subarticle" />
+
+  <txp:article_custom id="696" allowoverride="0" form="subarticle" />
+
+  <txp:article_custom id="697" allowoverride="0" form="subarticle" />
+
+  <txp:article_custom id="709" allowoverride="0" form="subarticle" />
+
+<txp:anc_hide>add id to .breadcrumbs</txp:anc_hide>

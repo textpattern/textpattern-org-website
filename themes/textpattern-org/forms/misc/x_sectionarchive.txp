@@ -1,0 +1,29 @@
+<div class="archive">
+<h2 id="mods_archive"><a href="<txp:site_url />mods">Mods <span>(<txp:mdn_count section="mods" />)</span></a></h2>
+<ul><txp:article_custom section="mods" form="archivelist" limit="9999" sort="Title" /></ul>
+<div class="jump"><a href="#top">hop to #top / Archive menu</a></div>
+<br clear="both" /></div><!-- .archive -->
+
+<div class="archive">
+<h2 id="plugins_archive"><a href="<txp:site_url />plugins">Plugins <span>(<txp:mdn_count section="plugins" />)</span></a></h2>
+<ul><txp:article_custom section="plugins" form="archivelist" limit="9999" sort="Title" /></ul>
+<div class="jump"><a href="#top">hop to #top / Archive menu</a></div>
+<br clear="both" /></div><!-- .archive -->
+
+<div class="archive">
+<h2 id="templates_archive"><a href="<txp:site_url />templates">Templates <span>(<txp:mdn_count section="templates" />)</span></a></h2>
+<ul><txp:article_custom section="templates" form="archivelist" limit="9999" sort="Title" /></ul>
+<div class="jump"><a href="#top">hop to #top / Archive menu</a></div>
+<br clear="both" /></div><!-- .archive -->
+
+<div class="archive">
+<h2 id="tips_archive"><a href="<txp:site_url />tips">Tips <span>(<txp:mdn_count section="tips" />)</span></a></h2>
+<ul><txp:article_custom section="tips" form="archivelist" limit="9999" sort="Title" /></ul>
+<div class="jump"><a href="#top">hop to #top / Archive menu</a></div>
+<br clear="both" /></div><!-- .archive -->
+
+<div class="archive">
+<h2 id="tutorials_archive"><a href="<txp:site_url />tutorials">Tutorials <span>(<txp:mdn_count section="tutorials" />)</span></a></h2>
+<ul><txp:article_custom section="tutorials" form="archivelist" limit="9999" sort="Title" /></ul>
+<div class="jump"><a href="#top">hop to #top / Archive menu</a></div>
+<br clear="both" /></div><!-- .archive -->

@@ -1,0 +1,10 @@
+<txp:if_different><h2><txp:category1 link="1" title="1" /></h2></txp:if_different>
+
+<txp:if_different><h4><a href="<txp:site_url />archives#<txp:section title="0" />archive"><txp:section title="1" /> <txp:hide><span>(13)</span></txp:hide></a></h4>><ul></txp:if_different>
+
+<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth><txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth><txp:permlink><txp:title /></txp:permlink> 
+<div class="arcat">&middot;  <txp:mdn_if_custom field="2" notempty="1"><txp:rei_show_custom customid="2" />, </txp:mdn_if_custom><txp:ob1_modified format="j M Y"  /> </div>
+<txp:mdn_if_custom field="1" notempty="1"><div class="ardesc"><txp:rei_show_custom /></div></txp:mdn_if_custom></li>
+
+
+<txp:if_different></ul><!-- <txp:section /> --></txp:if_different>

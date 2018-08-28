@@ -1,0 +1,5 @@
+<txp:if_different><h2><txp:rvm_if expr="custom_2"><txp:rei_show_custom customid="2" /><txp:else /><txp:author /></txp:rvm_if></h2><ul></txp:if_different>
+<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth><txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth>
+<txp:permlink><txp:title /></txp:permlink> <div class="arcat"><txp:swf_if_not_empty field="category1" minwords="1"><txp:asy_showcat link="true" /></txp:swf_if_not_empty></div><txp:mdn_if_custom field="1" notempty="1"><div class="ardesc"><txp:section title="1" link="0" />: <txp:rei_show_custom /> <div class="ardate"> <txp:rvm_if expr="custom_9"><span class="statusmsg">[archived]</span>  &middot; <!-- status -->
+</txp:rvm_if>  <txp:ob1_modified format="j M Y"  /> &middot; <txp:rvm_if expr="category1 or category2"><txp:asy_showcat link="true" /></txp:rvm_if></div></div></txp:mdn_if_custom></li>
+<txp:if_different><span style="display:none;"><txp:rvm_if expr="custom_2"><txp:rei_show_custom customid="2" /><txp:else /><txp:author /></txp:rvm_if></span></ul></txp:if_different>

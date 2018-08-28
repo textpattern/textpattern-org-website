@@ -1,0 +1,66 @@
+<txp:comments_error wraptag="ul" break="li" />
+
+<txp:comments_error wraptag="ul" break="li" />
+
+<txp:comments_error wraptag="ul" break="li" />
+
+<table cellpadding="4" cellspacing="0" border="0">
+
+<tr>
+	<td align="right">
+		<label for="comment_name_input"><txp:text item="comment_name" /></label>
+	</td>
+
+	<td>
+		<txp:comment_name_input />
+	</td>
+
+	<td>
+		<txp:comment_remember />
+	</td> 
+</tr>
+
+<tr>
+	<td align="right">
+		<label for="comment_email_input"><txp:text item="comment_email" /></label>
+	</td>
+
+	<td colspan="2">
+		<txp:comment_email_input />
+	</td>
+</tr>
+
+<tr> 
+	<td align="right">
+		<label for="comment_web_input"><txp:text item="comment_web" /></label>
+	</td>
+
+	<td colspan="2">
+		<txp:comment_web_input />
+	</td>
+</tr>
+
+<tr>
+	<td align="right">
+		<label for="comment_message_input"><txp:text item="comment_message" /></label>
+	</td>
+
+	<td colspan="2">
+		<txp:comment_message_input />
+	</td>
+</tr>
+
+<tr>
+	<td align="right"> </td>
+
+	<td>
+		<txp:comments_help />
+	</td>
+
+	<td align="right">
+		<txp:comment_preview />
+		<txp:comment_submit />
+	</td>
+</tr>
+
+</table>

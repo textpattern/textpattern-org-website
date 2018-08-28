@@ -1,0 +1,10 @@
+<div id="recent" class="box">
+	
+<txp:article_custom limit="2" form="notices_post" section="notices" />
+
+	<txp:zem_ir group="box">Recently Added</txp:zem_ir>
+	<txp:article limit="3" />
+<div id="recentarticles">
+<ul><txp:article form="list" limit="18" offset="3" allowoverride="0" /></ul>
+</div><!-- #recentarticles -->
+	</div><!-- #boxrecent -->

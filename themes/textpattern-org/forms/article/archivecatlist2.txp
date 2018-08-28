@@ -1,0 +1,9 @@
+<txp:if_different><h4><a href="<txp:site_url />archives/?section=<txp:section title="0" />"><txp:section title="1" /></a></h4></txp:if_different>
+
+<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth><txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth><txp:permlink><txp:title /></txp:permlink> 
+<div class="arcat">
+<txp:rvm_if expr="custom_9"><span class="statusmsg">[archived]</span> <!-- status -->
+</txp:rvm_if>
+
+&middot; <txp:mdn_if_custom field="2" notempty="1"><txp:rei_show_custom customid="2" />, <else /><txp:author />, </txp:mdn_if_custom><txp:ob1_modified format="j M Y"  /> </div>
+<txp:mdn_if_custom field="1" notempty="1"><div class="ardesc"><txp:rei_show_custom /></div></txp:mdn_if_custom></li>

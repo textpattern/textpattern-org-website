@@ -1,0 +1,774 @@
+/* general >> */
+*{margin:0;padding:0;font-size:100%;color:#333;}
+img{border:0;}
+body{background:#666;border-top:90px solid #90acbb;border-bottom:90px solid #90acbb;}
+#mainnav,.archiveoffer,span pre,body,.randomnote,textarea{font-family:"lucida sans unicode","lucida sans",sans-serif,arial;}
+#inbody{border-top:2px solid #414141;border-bottom:2px solid #414141/*dark grey*/;}
+h1.h1,#tag,.box h3,#comments h2{font-family:"Baar Sophia","Times Sans Serif";}
+#container{margin-left:auto;margin-right:auto;font-size:90%;background:#333;}
+#frame{margin-top:-92px;margin-bottom:-92px;}
+* html #frame{margin-top:0;margin-bottom:0;}
+* html body{border-top:0;border-bottom:0;}
+#welcome .inbox{padding-top:-10px;padding-bottom:-10px;}
+p{margin:15px 0 20px 0;}
+#welcome p{margin:15px 0 20px 0;}/* << general */
+
+/* inbox >> */
+#flags textarea,.inbox{background:#ddf1cd;border:2px solid #a7c08a/*green*/;}
+#archiveoptions .inbox{border:2px solid #b1c594;background:#b1c594/*green*/;margin-bottom:16px;}
+#col1 #archiveoptions .inbox{padding:0;}
+
+#col1 .inbox{font-size:90%;}
+#login .inbox{text-align:center;padding:4px;line-height:150%;}
+.login :link,.login :visited{background:#b6cea2/*green*/;border:1px solid #8cac6c;padding:2px 4px;margin:5px 0;}
+#col1 .inbox{padding:7px;}/* << inbox */
+
+/* more, jump >> */
+#mainlinks .more,#search .more,.boxnote{text-align:center;}
+#mainlinks .more,#search .more,#searchsubmit,#catlist li,.boxnote,#sectlist li,.boxnote{font-size:90%;}
+#recentcomments .more{border-top:4px solid #eefde4;margin-left:-7px;margin-right:-7px;}/* << more, jump */
+
+/* columm widths >> */
+#container{min-width:700px;max-width:1200px;width:90%;background:#fff;border:2px solid #cddae1/*#414141*/;border-top:0;}
+#maincol,.maincol{width:55%;float:left;}
+#col1,.col1{width:25%;float:left;}
+#col2,.col2{width:20%;float:right;}
+
+#maincol,#col1,#col2{margin-bottom:20px;}
+
+* hml #about #col1,* html #about .col1,
+* hml #links #col1,* html #links .col1,
+* hml #archive #col1,* html #archive .col1,
+* html #main #col1,* html #main .col1{width:23%;}
+#archive #maincol,#about #maincol,
+#links #maincol{width:60%;float:right;}
+#about #col1,#archive #col1{width:20%;float:right;}
+#links #col1{width:18%;float:right;margin-left:1%;}
+#links #col2{width:18%;margin-right:2%;}
+
+#about #content{margin-top:34px;}
+#help #maincol,#help .maincol,
+#page #maincol,#page .maincol,
+#list #maincol,#list .maincol{width:75%;float:left;}
+#help #col2,#page #col2,#list #col2{width:25%;float:right;}/* << columm widths */
+
+/* form elements >> */
+input[type="text"],#cse-search-box input[type="text"]{border:2px solid #99b382/*green*/;}
+input,textarea{max-width:500px;}
+#search input[type="text"]{width:100%;background:#fff url("/sight/gform.gif") no-repeat top left;}
+#flags button,input[type="submit"]{background:#c1d8ae/*lightgreen*/;border:1px solid #99b382;}
+#flags button:hover,input[type="submit"]:hover{background:#a0b68c;}
+#searchsubmit{text-align:right;}
+#contactform .forminput1,#contactform .forminput2{float:left;width:49%;}
+#contactform .forminput2{margin-left:10px;}
+#contactform textarea{min-height:110px;}
+#contactform textarea,#contactform input[type="text"]{display:block;width:100%;}
+#contactform legend{display:none;}
+#contactform fieldset{border:0;}
+#flag textarea,#flag input[type="text"],#contactform textarea,#contactform input[type="text"],#registerpage input[type="text"]{border:2px solid #cad8df;background:#f2f9fd/*lightblue*/;margin-bottom:7px;}
+#registerpage input[type="text"]:hover{border:2px solid #b3cbd7;}
+#contactform input[type="submit"],#registerpage input[type="submit"]{min-width:100px;border:1px solid #cad8df;background:#f2f9fd/*lightblue*/;padding:2px 5px;margin-bottom:25px;}
+#contactform input[type="submit"]:hover,#registerpage input[type="submit"]:hover{border:2px solid #cad8df;background:#d0d7db;}
+#contactform .cnote p{clear:both;}
+#comments input[type="text"],#comments textarea{width:160px;border:2px solid #abbf8e/*green*/;background:#effde4;}
+#comments input[type="submit"]{width:100px;border:1px solid #abbf8e;background:#effde4/*green*/;padding:2px 5px;}
+#comments input[type="submit"]:hover{background:#a0b68c;}
+#comments textarea{min-height:200px;}
+.button{text-align:center;}
+.box form select{width:100%;border:2px solid #cad8df;background:#fff;}
+#search input[type="text"],#cse-search-box input[type="text"]{border:2px solid #99b382/*green*/;}/* << form elements */
+
+/* list elements >> */
+#archiveoptions li,#helpmenu li,#aboutmenu li,#noticesmenu li{list-style:none;}
+#archiveoptions li li,#helpmenu li li,#aboutmenu li li,#noticesmenu li li{list-style:disc;}
+#helpmenu li{background:#c1d8ae/*green*/;}
+#archiveoptions li li,#helpmenu li li{padding-left:0;list-style:inside/*outside;margin-left:20px;*/}
+#helpmenu li li{margin-left:-10px;text-indent:36px;}
+#archiveoptions li{text-indent:7px;}
+#helpmenu li ul{margin-bottom:10px;}
+#welcome,#catlist,#sectlist,#relatedarticles{margin-top:25px;}
+#recentcomments{margin-top:0;}
+#recentcomments p{margin:0;text-align:left;}
+#relatedarticles li,#recentcomments li,#catlist li,#sectlist li{list-style:none;}
+#archiveoptions li li ul{padding-left:15px;}
+
+#relatedarticles .more,#recentcomments .more{padding:7px;text-align:right;}
+.asv_recent_comments .clcmessage,.asv_recent_comments .clcauthor{padding:0 7px;}
+.asv_recent_comments li{padding:7px 0;}
+.asv_recent_comments .clatitle :link,.asv_recent_comments .clatitle :visited{display:block;border:0;padding:7px;}
+.asv_recent_comments .clatitle :link:hover,.asv_recent_comments .clatitle :visited:hover{background:#d3e9c2/*green*/;border:0;}/* << list elements */
+
+
+/* alternate line styles >> */
+#archiveoptions li .a,
+#helpmenu li .a,
+#recentcomments .a,
+.gr .a{background:#ddf1cd/*green*/;}
+
+#archiveoptions li .b,
+#helpmenu li .b,
+#recentcomments .b,
+.gr .a,
+#archiveoptions li ul{background:#eefde4/*lightgreen*/;}
+#recentcomments li{margin-left:-7px;margin-right:-7px;padding:7px;}
+/*#recentcomments li:hover{background:#d3e9c2 green;}*/
+
+.archivebycat li.a,
+.archive li.a,
+.rssCatList li.a,
+#relatedarticles .a/*,dd .rssAlt*/,
+.bl,.bl .a{background:#f0f8fd/*lightblue*/;}
+
+.rssCatList li.a a,
+.archivebycat li.a a,
+.archive li.a a/*,
+.archive dl a.rssAlt*/{border-bottom:2px solid #f0f8fd/*lightblue*/;}
+
+.asv_recent_comments .clcmessage a,
+.asv_recent_comments .clcfoot a{border-bottom:1px solid #c0d8e6;}
+
+.asv_recent_comments .clcmessage a:hover,
+.asv_recent_comments .clcfoot a:hover{border-bottom:2px solid #c0d8e6;}
+
+.archivebycat li.b,
+.archive li.b,
+.rssCatList li.b,
+#relatedarticles .b,
+.bl .b{background:#e2ebf1/*blue*/;}
+
+.rssCatList li.b a,
+.archivebycat li.b a,
+.archive li.b a,.archive dl a,
+{border-bottom:2px solid #e2ebf1/*blue*/;}
+
+#relatedarticles .inbox,.bl{border:2px solid #c0d8e6/*blueblue*/;}
+#aboutmenu .bl li a:hover,#noticesmenu .bl li a:hover,.bl li a,.bl li :link,.bl li :visited,
+.bl li a:hover,.bl li link:hover,.bl li :visited:hover,
+{border-bottom:2px solid #c0d8e6/*blueblue*/;}
+
+#aboutmenu .gr li a:hover,#noticesmenu .gr li a:hover,.gr li a,.gr li :link,.gr li :visited,
+.gr li link:hover,.gr li :visited:hover,.gr li a:hover{border-bottom:2px solid #a7c08a/*green*/;}
+
+
+#relatedarticles :link,#relatedarticles :visited,
+#helpmenu :link,#helpmenu :visited,
+#aboutmenu :link,#aboutmenu :visited,
+#noticesmenu :link,#noticesmenu :visited{display:block;}
+
+#catlist ul,#sectlist ul{border-top:2px solid #cad8df/*blue*/;}
+#sectlist li :link,#catlist li :link,
+#sectlist li :visited,#catlist li :visited{display:block;padding:2px 6px;color:#333;border-bottom:2px solid #cad8df/*blue*/;}
+/* << alternate line styles */
+
+/* link styles >> */
+a{text-decoration:none;color:#222;}
+.article p :link,.archiveoffer :link,.randomnote :link,
+.article p :visited,.archiveoffer :visited,.randomnote :visited,#recentcomments .clcauthor :link,#recentcomments .clcauthor :visited,.box .more :link,.box .more :visited,
+#welcome a,.gr .more a,.abody * :link,.abody * :visited,
+.box :link,.box :visited,.anav :link,.anav :visited,
+#commentform * :link,#commentform * :visited,
+#comments * :link,#comments * :visited{border-bottom:1px solid #b2c1a6/*green*/;}
+
+.abody * :link,
+.abody * :visited
+{color:#406030;text-decoration:underline;border:0;}
+
+.abody * :link:hover,#thecomments p :link,#thetrackbacks p :link,.box .gr :link,.more :link,
+.abody * :visited:hover,#thecomments p :visited,#thetrackbacks p :visited,.box .gr :visited,.more :visited,
+#recentcomments .clcauthor :link:hover,
+.box .gr .more :link:hover,
+#recentcomments .clcauthor :visited:hover,
+.box .gr .more :visited:hover,
+#commentform * :link:hover,#commentform * :visited:hover,
+#comments * :link:hover,#comments * :visited:hover,
+#help .social a:hover,#about .social a:hover,.anav :link:hover,.anav :visited:hover{border-bottom:1px solid #b2c1a6/*green*/;text-decoration:underline;}
+
+.gr li :link:hover,.gr li :visited:hover,.gr .more a:hover{bottom:2px solid #b2c1a6/*green*/;background:#c4d6aa;}
+.current a,.active a{background:#9aabb7/*bluedark*/;}/* << general link styles */
+
+/* alignment commands >> */
+.fr{float:right;}
+.fl{float:left;}
+.l,.left{text-align:left;}
+.r,.right{text-align:right;}
+.c,.center{text-align:center;}/* << alignment commands */
+
+/* comments >> */
+#comments { clear: left; }
+.cnote{font-size:90%;}
+#comments h2{font-weight:normal;}
+#comments{margin-top:15px;}
+#comments .p{margin-left:10px;}
+#comments .a{/*background:#f0f8fd lightblue;*/background:#fff url("/sight/bfadel.gif") repeat-y right;}
+#comments .b{/*background:#e2ebf1 blue;*/background:#fff url("/sight/bDfadel.gif") repeat-y right;}
+.acomment{padding:7px 15px 7px 60px;}
+#comments h2{margin-top:20px;}
+#thetrackbacks,#thecomments{margin-bottom:30px;}
+.gravatar{float:left;margin-top:-1.5em;}
+
+.acomment{border-top:2px solid #cad8df/*blue*/;border-bottom:2px solid #cad8df;margin-top:-2px;padding-left:60px;}
+.acomment .gravatar{margin-left:-50px;}
+.cfoot{text-align:right;font-size:85%;}
+.cauthor{margin-bottom:7px;}
+#thecomments .cfoot :link,#thecomments .cfoot :visited{border-bottom:1px solid #fff;}
+#thecomments .cfoot :link:hover,#thecomments .cfoot :visited:hover,#thecomments .cnote :link:hover,#thecomments .cnote :visited:hover{border-bottom:1px solid #b2c1a6/*green*/;}
+
+.clatitle{margin-bottom:7px;}
+.clcmessage{}
+.clcauthor{font-style:italic;text-align:right;}
+.clatitle,.clcauthor{font-size:95%;}
+#recentcomments li br + br{display:none;}
+#commentform div{margin-bottom:6px;}/* << comments */
+
+/* header styles >> */
+#header{text-align:center;padding-bottom:10px;}
+#header h1{padding:10px 15px;text-align:center;display:inline;margin:10px 15px;}
+h1.type{font-family:"Gotham Nights";font-size:310%;text-indent:-5000px;}
+h3{margin:10px 10px 2px 10px;}
+.article h3{margin:0;}
+.box h3 a{border:0;}
+.box h3{font-size:130%;}
+#comments h2,.article h3{font-size:150%;}
+h3.em{font-size:140%;}
+#header span{padding-bottom:-3em;}
+#header h1 :link,#header h1 :visited{border:0;}/* << header styles */
+
+/* mainnav >> */
+#mainnav{background:#cddae1;font-weight:bold;text-align:center;padding:5px 0;border-top:2px solid #b7c9d1;border-bottom:2px solid #b7c9d1;}
+#mainnav{padding-left:-200px;padding-right:-200px;}
+#mainnav li :link,#mainnav li :visited{padding:5px 9px;border:2px solid #b7c9d1;margin:-2px -3px -6px -3px;}
+#mainnav span{font-size:80%;font-weight:normal;}/* << mainnav */
+
+/* window, footer, breadcrumbs >> */
+#window .maincol,
+#window .col1,
+#window .col2,
+#footer .col2
+#window .topnotice{padding:2px 7px;}
+#window .maincol{width:54%;}
+#window .col1{width:24%;margin-right:-15px;}
+#window .col2,
+#footer .col2{width:19%;margin-left:-15px;padding-left:15px;}
+#footer a{margin:0 3px;}
+#window,#footer{font-size:80%;}
+#window,.breadcrumbs{padding:8px 10px;}
+.breadcrumbs{margin-top:16px;}
+#footer{margin-top:10px;clear:both;padding:7px 10px;border-top:2px solid #cddae1;background:#fff url("/sight/bfaded.gif") repeat-x top left;}
+#footer ul{padding-top:2px;padding-bottom:2px;}
+#footnav li:before{content: "| ";}
+#footnav li:first-child:before{content: "";}
+/*IE workaround*/ /*All IE browsers*/
+* html #footnav li{border-left:1px solid black;padding:0 0.4em 0 0.4em;margin: 0 0.4em 0 -0.4em;}
+/*Win IE browsers - hide from Mac IE\*/
+* html #footnav{height:1%;}
+* html #footnav li{display:block;float:left;}
+* html #foot2{clear:left;}
+/*End hide*//*Mac IE 5*/
+* html #footnav li:first-child{border-left:0;}
+
+.breadcrumbs{/*font-size:75%;*/font-size:115%;margin-left:2px;}
+.breadcrumbs a{border:0;/*font-size:110%;*/font-size:80%;margin:0 5px;}
+.breadcrumbs .active{font-size:110%;font-weight:bold;}/* << window, footer, breadcrumbs*/
+
+/* section and category lists >> */
+#sectlist h3,#catlist h3{margin-bottom:10px;}
+#archive #catlist ul,#archive #sectlist ul{border:0;}
+#archive #catlist h3,#archive #sectlist h3{font-size:110%;padding:3px 6px 5px 6px;margin:0;}
+#sectlist li span,#catlist li span,
+#aboutmenu li .apost,#noticesmenu li .apost{font-size:90%;/*float:right;*/display:block;text-align:right;margin-top:-1em;}
+#main #sectlist li span,#main #catlist li span{display:none;}
+#sectlist li,#catlist li{clear:both;}
+#catlist .wraphb,#sectlist .wraphb{background:#c0d8e6;display:block;}
+#catbox form div br{display:none;}/* >> section and category lists */
+
+/* recentarticles list >> */
+
+
+
+#recentarticles .a,#recentarticles .a .articlekey,#recentarticles{/*background:#c4d6aa;*/background:#fff url("/sight/gDfadelie.gif") repeat-y left;}
+
+/* html #recentarticles .a,* html #recentarticles .a .articlekey,* html #recentarticles{background:#eefde4 url("/sight/gDfadelie.gif") repeat-y left;}*/
+
+
+
+#page .articlekey,#page .inarticle{background:#fff url("/sight/gfadepage.gif") repeat-y left;}
+
+#recentarticles .b,#recentarticles .b .articlekey{/*background:#b2c595;*/background:#fff url("/sight/gfadel.gif") repeat-y left;}
+
+* html #recentarticles .b,* html #recentarticles .b .articlekey{background:#e2ebf1 url("/sight/gfadel.gif") repeat-y left;}
+
+
+
+
+#recentarticles .a h2,
+#recentarticles .a h2 a{background:#cce1ed;}
+#recentarticles .b h2,
+#recentarticles .b h2 a{background:#e8f0f5;}
+#recentarticles li{list-style:none;line-height:150%;}
+#recentarticles .articlekey{text-align:right;width:130px;float:left;padding-right:10px;clear:left;}
+#recentarticles h2{margin-left:140px;}
+#recentarticles .apost{float:left;margin-left:15px;}
+#recentarticles .atype{margin-left:10px;}
+* html #recentarticles li,
+* html #recentarticles a,
+* html #catlist li,* html #sectlist li,#mainnav li,#footer li,.acompat,.arev,#gnav li,.inline,#helpbox h3 a div,#helpbox h3 a span{display:inline;}
+
+#recentarticles h2 a,* html #recentarticles h2 a{display:block;}
+
+/* << recentarticles list */
+
+/* boxlist lists >> */
+.boxlist a{border:0;}
+.boxlist li{list-style:inside;padding-left:10px;line-height:175%;}
+.boxlist li li{padding-left:15px;}
+.boxlist .sub{font-size:85%;text-align:right;margin-top:-.3em;}
+#aboutmenu .boxlist li,
+#noticesmenu .boxlist li{padding:0;}
+#aboutmenu .boxlist li :link,#aboutmenu .boxlist li :visited,
+#noticesmenu .boxlist li :link,#noticesmenu .boxlist li :visited{padding-left:10px;}
+#aboutmenu .boxlist li li,#noticesmenu .boxlist li li,#helpbox li{list-style:inside;}
+#aboutmenu .boxlist li li :link,#aboutmenu .boxlist li li :visited,
+#noticesmenu .boxlist li li :link,#noticesmenu .boxlist li li :visited{margin-left:0;padding-left:25px;}
+#helpbox .boxlist li{font-size:100%;}
+#stagspage .boxlist li li{list-style:none;}
+/*#stagspage .boxlist ul{font-weight:bold;}*/
+#stagspage .boxlist li ul{font-weight:normal;font-size:95%;}
+#aboutmenu .boxlist li li,#aboutmenu .boxlist li ul,#aboutmenu .boxlist ul ul{margin-bottom:0;padding-bottom:0;}
+
+#disclaimer p{margin-left:8px;word-wrap:break-word;}
+#disclaimer p,#helpbox p,#answersbox p,#helpbox li{font-size:85%;}
+#mainlinks .boxlist li{margin-left:-10px;}
+#page .boxlist :link,#page .boxlist :visited,
+#mainlinks .boxlist :link,#mainlinks .boxlist :visited{border-bottom:1px solid #b2c1a6;}
+#mainlinks li{margin-right:15px;}/* << boxlist lists */
+
+/* pagination >> */
+#pagination,#gnav{text-align:center;}
+#gnav{font-size:90%;margin-top:8px;}
+#gnav a{border-bottom:1px solid #aaa;padding:2px 5px;margin:-2px -5px;}
+#gnav .current a{border:1px solid #c2dae7;background:#e9f1f5;padding:2px 5px;}
+#pagination .archiveoffer{font-size:120%;font-weight:bold;}
+#pagination .acol1 p{margin-top:0;font-size:90%;}
+#gnav li{margin:0 6px;}
+#pagination{border:2px solid #c2dae7;background:#F2F7FF;padding:2px 5px;margin-left:10px;}
+#pagination h3,#pagination p{margin:0;}
+#pagination .acol1{padding-left:0;}/* << pagination */
+
+/* article styles >> */
+.article p{line-height:140%;}
+.article .articlekey{float:left;text-align:right;/*background:#c5d7ab;*/margin-top:7px;background:#fff url("/sight/gfadel.gif") repeat-y left;}
+#main .article .articlekey,#list .article .articlekey{width:130px;}
+#main .article h4,#main .inarticle h2,#main .article .abody,
+#list .article h4,#list .inarticle h2,#list .article .abody{margin-left:140px;}
+
+#help .h2{display:block;background:#b1c493;}
+#help h4,.article h2.ques{width:170px;float:left;border-left:0;font-weight:normal;}
+.article h2.ques{background:#b1c493;font-size:105%;padding:4px 10px;}
+#help h4{background:#c5d6aa;color:#708650;text-align:right;padding:6px 10px;clear:both;}
+#help h2.ans{display:block;}
+
+#help .article .articlekey,
+#page .article .articlekey{width:180px;}
+#helpmenu,
+#page .article h4,
+#page .inarticle h2,
+#page .article .abody,
+#help .article h2.ans,
+#help .article .abody{margin-left:190px;}
+#helpmenu{margin-bottom:20px;border:2px solid #a7c08a;background:#ddf1cd;}
+#helpmenu h2{text-align:center;}
+#listpage #helpmenu h2{padding:5px 10px 20px 10px;}
+#indipage #helpmenu h2{padding:0;}
+#helpmenu h2 a{padding:5px 10px 20px 10px;}
+
+#about h4{font-style:italic;font-weight:normal;font-size:115%;}
+
+
+#list #spluginspage .main .abody *,
+#list #smodspage .main .abody *,
+#list #stipspage .main .abody *,
+#list #scatpage .main .abody *,
+#list #stutorialspage .main .abody *,
+#list .main .atype,.hide{display:none;}
+
+#sdefaultpage .main .atype,
+#list #spluginspage .main .abody br.ab,
+#list #smodspage .main .abody br.ab,
+#list #stipspage .main .abody br.ab,
+#list #scatpage .main .abody br.ab,
+#list #stutorialspage .main .abody br.ab,
+#list .abody br.ab{display:block;}
+
+.article .atype{margin-bottom:10px;}
+.article .atype a{border:0;}
+
+.inarticle{/*background:#c5d7ab;*/background:#fff url("/sight/gfadel.gif") repeat-y left;}
+#help .inarticle{background:#eefde4;}
+.article,#recentarticles,#relatedarticles .inbox,ul.boxlist{font-size:90%;}
+.article .more{text-align:right;}
+.article,#recentcomments,#relatedarticles,.box{margin-bottom:15px;}
+#content .rssCcat,.rssCatList h2,.archivebycat h2,.archive h2,.inarticle h2,.archive dl dt{font-size:125%;background:#c0d8e6;}
+#main .anotice h2 :link,#main .anotice h2 :visited,#main .anotice h2.stat{background:#edec94;}
+.inarticle h5{background:#c0d8e6;font-size:120%;}
+/*.archivebycat,*/.archivebycat ul,.archive,.abody{background:#e8f0f5;}
+#main .anotice .abody{background:#f9f8e9;}
+.abody{padding:1px 9px 7px 9px;}
+.inarticle h2,.abody,#recentarticles h2,.article h4{border-left:1px solid #587638;}
+* html #recentarticles .articlekey{border-right:1px solid #587638;}
+.inarticle,#recentarticles{border:1px solid #587638;border-left:0;}
+.article h4{background:#d8e4eb;}
+#main .anotice h4{background:#f5f4bb;}
+#help .articlekey .atitle,
+#page .articlekey .atitle{text-align:left;margin-top:15px;margin-left:8px;}
+#help .articlekey,
+#page .articlekey{padding-bottom:15px;}
+.abody .apost{float:right;margin-left:5%;text-align:center;}
+.abody .atitle{font-size:85%;}
+.articlekey .atitle{font-size:95%;}
+.atitle{color:#666;}
+.article br.ab{padding-top:-20px;}
+
+.article h4{padding:3px 9px;}
+.article h5{margin:20px -9px 0 -9px;}
+
+.apostfoot{margin-top:15px;}
+
+.atype{font-size:110%;}
+.arev{font-weight:bold;}
+
+#content .rssCcat a,.rssCatList h2 a,.archivebycat h2 a,.archive h2 a,.subarticle h5 a,.inarticle h2 a{padding:7px 9px;}
+.rssCatList h2.stat,.archivebycat h2.stat,.archive h2.stat,h2.stat,.archive dl dt{padding:7px 9px;}
+
+.abody li{margin-left:15px;}
+.articlefoot{margin-top:27px;}/* << article styles */
+
+/* archive page styles >> */
+#archiveoptions :link,#archiveoptions :visited{border:0;display:block;}
+#archive .archivebycat h4,#archive .archive h4,#archive .rssCatList h4{background:#d8e4eb;}
+.archive h4{padding:4px 10px;}
+.rssCatList h4 a,.archivebycat h4 a,.archivebycat h4.stat,.rssCatList h4.stat{padding:6px 10px;}
+.arcat{/*float:right;*/display:block;text-align:right;margin-top:-1em;}
+.ardesc{margin-left:35px;clear:both;text-align:left;}
+.authorarchive .ardate a,.ardate,.arcat,.ardesc{color:#777;}
+.archivebycat li,.archive li{list-style:inside decimal;padding:5px 10px 7px 10px;font-size:75%;}
+.rssCatList li,.archivebycat li,.archive li,.ardesc{clear:both;}
+.archivebycat li :link,.archive li :link,
+.archivebycat li :visited,.archive li :visited,.archive dd .rssArticle :link,.archive dd .rssArticle :visited{color:#000;font-size:125%;}
+
+.archivebycat li .arcat :link,.archive li .arcat :link,
+.archivebycat li .arcat :visited,.archive li .arcat :visited,.archive dd :link,.archive dd:visited{color:#666;font-size:95%;}
+.archivestate li .arcat a,.archivestate li .arcat :link,.archivestate li .arcat :visited{font-size:100%;color:#333;}
+
+.archive h4{margin-top:10px;}
+/*.archivebycat,*/.archive{margin-bottom:20px;border:1px solid #587638;}
+.archivebycat ul{margin-bottom:20px;border:1px solid #587638;border-top:0;}
+.archivebycat .rssCcat{border:1px solid #587638;border-bottom:0;}
+.archive dd .rssSubdate{font-size:90%;}
+.archive dd .rssArticle{font-size:105%;}/* << archive page styles */
+
+/* columns in articles >> */
+.acol1{width:165px;float:left;}
+.acol2{margin-left:180px;}
+.acol1,.acol2{padding-left:10px;}
+#list .acol1{width:110px;}
+#list .acol2{margin-left:120px;}/* << columns in articles */
+
+/* variants >> */
+.em{font-size:110%;}
+br.ab,.articlefoot,.apostfoot,.article{clear:both;}
+#accessibility{display:none;}
+pre,code{font-family:Courier,monospace;}
+.small{font-size:75%;}/* << variants */
+
+/* hover states >> */
+.login :link:hover,
+.login :visited:hover{background:#d3e9c2;}
+
+#helpmenu :link:hover,#archiveoptions li :link:hover,.gr :link:hover,
+#helpmenu :visited:hover,#archiveoptions li :visited:hover{border:0;background:#c4d6aa;}
+
+#sectlist li :link:hover,#catlist li :link:hover,
+#sectlist li :visited:hover,#catlist li :visited:hover{background:#cad8df;}
+
+#mainnav :link:hover,#mainnav :visited:hover{background:#97c5e0;}
+
+.zemError li,.helpnote:hover,.helpnote :link:hover,.helpnote :visited:hover{background:#ff3;}
+
+#relatedarticles :link:hover,#recentarticles h2 a:hover,.rssCatList h2 :link:hover,#content .rssCcat :link:hover,.archivebycat h2 :link:hover,.archive h2 :link:hover,.inarticle h2 :link:hover,.subarticle h5 :link:hover,#gnav :link:hover,
+#relatedarticles :visited:hover,.rssCatList h2 :visited:hover,#content .rssCcat :visited:hover,.archivebycat h2 :visited:hover,.archive h2 :visited:hover,.inarticle h2 :visited:hover,.subarticle h5 :visited:hover,#gnav :visited:hover,
+* html #recentarticles h2 a:hover,
+.bl :link:hover,.bl visited:hover,.bl a:hover{background:#97c5e0;color:#000;text-decoration:none;}
+
+#main .anotice h2 :link:hover,#main .anotice h2 :visited:hover{background:#d1d083;}
+
+.archive dl dt :link:hover,.archive dl dt :visited:hover{background:#97c5e0;color:#000;border:0;}
+
+#recentarticles h2 :link,.subarticle h5 :link,.rssCatList h2 :link,.archivebycat h2 :link,.archive h2 :link,#content .rssCcat :link,.subarticle h5 :link:hover,.inarticle h2 :link,
+#recentarticles h2 :link:hover,.rssCatList h2 :link:hover,#content .rssCcat :link:hover,.archivebycat h2 :link:hover,.archive h2 :link:hover,.inarticle h2 :link:hover,
+#recentarticles h2 :visited,.subarticle h5 :visited,.rssCatList h2 :visited,.archivebycat h2 :visited,.archive h2 :visited,#content .rssCcat :visited,.subarticle h5 :visited:hover,.inarticle h2 :visited,
+#recentarticles h2 :visited:hover,.rssCatList h2 :visited:hover,#content .rssCcat :visited:hover,.archivebycat h2 :visited:hover,.archive h2 :visited:hover,.inarticle h2 :visited:hover{border:0;}
+
+#base :link:hover,#base :visited:hover,#sec a{color:#fff;}
+.box .login :link:hover,.box .login :visited:hover,
+#registerpage .login :link:hover,#registerpage .login :visited:hover{border:1px solid #99b382;}
+#footer :link:hover,#window :link,#footer .col2 :link,
+#footer :visited:hover,#window :visited,#footer .col2 :visited{border-bottom:1px solid #9e9e9e;}
+.article p :link:hover,.breadcrumbs :link:hover,.box :link:hover,.archiveoffer :link:hover,.randomnote :link:hover,#page .boxlist :link:hover,#mainlinks .boxlist :link:hover,.rssJump :link:hover,.jump :link:hover,.more :link:hover,
+.article p :visited:hover,.breadcrumbs :visited:hover,.box :visited:hover,.archiveoffer :visited:hover,.randomnote :visited:hover,#page .boxlist :visited:hover,#mainlinks .boxlist :visited:hover,.rssJump :visited:hover,.jump :visited:hover,.more :visited:hover,#welcome :link:hover,#welcome :visited:hover{border-bottom:1px solid #555;text-decoration:underline;}
+
+.rssCatList li :link:hover,.archivebycat li :link:hover,.archive li :link:hover,
+.rssCatList li :visited:hover,.archivebycat li :visited:hover,.archive li :visited:hover,
+.archive dl :link:hover,.archive dl :visited:hover{border-bottom:2px solid #97c5e0;color:#000;}
+#window :link:hover,#footer .col2 :link:hover,
+#window :visited:hover,#footer .col2 :visited:hover{border-bottom:1px solid #9e9e9e;text-decoration:underline;}/* << hover states */
+
+.helpnote{font-size:85%;}
+h3 .helpnote,h2 .helpnote{font-size:70%;}
+.helpnote,.helpnote :link,.helpnote :visited{color:#330;}
+.helpnote :link,#relatedarticles :link,.boxnote :link,
+.helpnote :visited,#relatedarticles :visited,.boxnote :visited{border:0;}
+
+#maincol .incol{margin:0 7px 0 0;}
+#col1 .incol,#col2 .incol{margin:0 7px;}
+#answersbox{margin-top:20px;}
+
+.subarticle h5 :link,.rssCatList h2 :link,#content .rssCcat :link,.archivebycat h2 :link,.archive h2 :link,.inarticle h2 :link,
+.subarticle h5 :visited,.rssCatList h2 :visited,#content .rssCcat :visited,.archivebycat h2 :visited,.archive h2 :visited,.inarticle h2 :visited{display:block;}
+
+#recentarticles h2 a,#relatedarticles :link,
+#relatedarticles :visited{padding:2px 9px;}
+
+.rssJump,.jump{text-align:center;font-size:90%;}
+.rssCatList .jump,.rssCatList .rssJump,.archivebycat .jump,.archive .jump,.archive .rssJump{margin-top:20px;font-size:75%;}
+.archivebycat .rssJump{margin-bottom:15px;}
+
+#help .archiveoffer,
+#page .archiveoffer{font-size:110%;}
+.randomnote,.archiveoffer{text-align:center;margin:25px 4px;}
+
+#base{text-align:center;font-size:80%;color:#ccc;margin:5px 9px 10px 9px;}
+#sec{font-size:75%;color:#ccc;margin:5px 9px;}
+#sec a:hover{color:#bbb;border:0;}
+#base :link,#base :visited{color:#ddd;}
+.archivebycat li{list-style:none;padding-left:26px;display:block;} 
+.archivebycat li.rssCart{list-style:none;padding-left:35px;display:list-item;}
+#content .rssCsec{display:block;padding:10px;background:#f0f8fd;}
+.archivebycat h4 :link,.archivebycat h4 :visited{display:block;}
+.archivebycat h4 :link:hover,
+.archivebycat h4 :link:visited{background:#cad8df;}
+
+#aboutmenu .inbox,#noticesmenu .inbox{border-bottom:0;}
+
+.tags{text-align:justify;color:#aaa;word-wrap:break-word;
+border-top:2px solid #a7c08a;}
+#col2 .tags{border-top:2px solid #aac0cb;}
+.tags :link,.tags :visited{color:#555;}
+#col2 .tags :link,#col2 .tags :visited{color:#005783;}
+.tags :link:hover,
+.tags :visited:hover{color:#fff;background:#99b382;}
+#col2 .tags :link:hover,
+#col2 .tags :visited:hover{color:#fff;background:#7aa7bd;}
+.tags :link,.tags :visited{padding:1px 3px;}
+/*.tagsearch{font-size:80%;}*/
+.randomnote{font-size:90%;}
+.tagsearch .tags :link,.tagsearch .tags :visited{color:#888;}
+
+
+#content .inarticle .abody h1,
+#content .inarticle .abody h3,
+#content .inarticle .abody h2,
+#content .inarticle .abody h4,
+#content .inarticle .abody h5,
+#content .inarticle .abody h6{border:0;background:transparent;text-align:left;font-weight:bold;margin:5px 4px 10px 4px;padding:3px 4px;}
+
+#content .inarticle .abody h1,
+#content .inarticle .abody h3{font-size:120%;}
+#content .inarticle .abody h2{font-size:115%;}
+#content .inarticle .abody h4{font-size:110%;}
+#content .inarticle .abody h5,
+#content .inarticle .abody h6{font-size:105%;}
+
+.hs{margin-bottom:3em;margin-top:-3em;vertical-align:middle;}
+
+#linklist li{list-style:none;}
+#linklist ul{margin:0 -10px;}
+#linklist h2{margin:-5px -10px 0 -10px;font-size:150%;}
+#linklist li{font-size:95%;color:#777;}
+#linklist li a{font-size:125%;color:#222;font-weight:;}
+
+#registerpage p{font-size:95%;margin:10px;}
+.note{font-size:90%;}
+#registrationform{width:100%;text-align:center;}
+#registrationform .regform{margin-left:auto;margin-right:auto;text-align:center;}
+#registrationform input[type="submit"]{text-align:center;}
+
+.archive dl .rssCat{text-align:right;margin-top:-1em;}
+
+.archive dd{margin:3px 4px 1px 15px;font-size:85%;}
+.rssCat{margin:0 5px;font-size:105%;}
+.archive dd .rssArticle{font-size:115%;}
+
+#aboutmenu .apost,
+#noticesmenu .apost{margin:0 5px 0 2px;}
+#aboutmenu li span,
+#noticesmenu li span{margin-top:-2em;}
+h4.apost{font-style:normal;text-align:right;font-size:80%;}
+
+#help .abody cite{font-weight:bold;text-align:right;display:block;}
+#about .abody cite{display:block;text-align:right;}
+
+blockquote{margin:3px 9px 4px 9px;padding:2px 3px 2px 7px;border-left:5px solid #cad8df;background:#f2f9fd;}
+
+#aboutmenu .more,#noticesmenu .more{text-align:center;font-size:90%;}
+#aboutmenu .more a,#noticesmenu .more a{display:inline;}
+#aboutmenu .more a:hover,#noticesmenu .more a:hover{background:none;}
+
+#archive .archive li{list-style:none;}
+#archive .archive li h2{margin:-5px -10px;}
+#archive .archive li h2 a{border:0;}
+#archive .archive li h2{font-size:135%;}
+.boxlist li ul{margin-bottom:15px;}
+
+#sec{float:right;}
+
+pre{overflow:auto;}
+
+
+.atagarticle h4{font-weight:normal;}
+#tagclouds .atagarticle h2 a{color:#333;}
+
+.abody img{overflow:hidden;}
+#sdefaultpage .abody img{width:99%;max-width:450px;}
+
+.abody li{margin:4px 20px 6px 30px;}
+
+.subarticle h5.stat,.subarticle h5 :link,.subarticle h5 :visited{background:transparent url("/sight/bluefade.png") repeat-y left;display:block;margin-left:-17px;margin-right:-17px;text-decoration:none;color:#444;}
+
+* html .subarticle h5.stat,* html .subarticle h5 :link,* html .subarticle h5 :visited{background:transparent url("/sight/bluefade.gif") repeat-y left;}
+
+.plugin-author,.plugin-author a{color:#777;}
+.plugin-author{margin-left:7px;font-size:95%;}
+.plugin-author:before{content: "by ";}
+
+.box{margin-bottom:35px;}
+#sdefaultpage .box{margin-bottom:15px;}
+
+.abody table th{font-size:105%;border-bottom:1px solid #aaa;padding-bottom:5px;}
+.abody table td{text-align:center;padding:6px 13px;margin:2px 14px;border-bottom:1px solid #ddd;}
+.abody table{margin:20px 10px;}
+.abody table tr:hover td{border-bottom:1px solid #aaa;}
+
+#helpmenu li li{list-style:disc;}
+html>body #aboutmenu .inbox li li,
+/*html>body #helpmenu li li,*/
+html>body #archiveoptions li{list-style:none;}
+
+.todo del{color:#dedede;}
+.todo del *,.todo del strong{color:#ccc;}
+.todo del a{color:#ccc !important;}
+.todo del{font-size:90%;}
+.todo blockquote,.todo blockquote p{padding-top:3px;padding-bottom:2px;}
+.todo del blockquote{padding-top:0;padding-bottom:0;color:888;}
+.todo del blockquote p{color:#888;}
+.todo li{margin-top:4px;margin-bottom:4px;}
+.todo li:hover{background:#fff;}
+.todo li:hover blockquote{background:#efefef;}
+
+/* this will prevent screenshots from overflowing .abody  which it was doing in FF.  Move someplace else that makes more sense if needed. - Patrick*/
+.abody .image-element img{max-width:100%;}
+
+
+
+#scommentspage .asv_recent_comments ul{padding-left:10px;font-size:95%;}
+#scommentspage .asv_recent_comments .clcmessage{font-size:90%;}
+#scommentspage .asv_recent_comments li{/*background:#edf7e6;*/padding:0;}
+#scommentspage .asv_recent_comments .clatitle{/*background:#e2f3d5;*/background:#fff url("/sight/bluefadetorightdark.gif") repeat-y left;}
+#scommentspage .asv_recent_comments .clatitle :link:hover,
+#scommentspage .asv_recent_comments .clatitle :visited:hover{background:#d0ddf4;color:#000;}
+#scommentspage .asv_recent_comments .clcfoot{display:block;text-align:right;font-size:95%;}
+#scommentspage .asv_recent_comments .clcposted{font-size:90%;}
+
+.asv_recent_comments .gravatar{float:right;margin-right:10px;}
+
+#scommentspage .asv_recent_comments .a{background:#fff url("/sight/bluefadetorightlight.gif") repeat-y left;}
+#scommentspage .asv_recent_comments .b{background:#fff url("/sight/bluefadetoright.gif") repeat-y left;}
+
+.social{margin:20px 0 7px 0;text-align:right;bottom:0;display:block;}
+.social .helpnote{letter-spacing:2px;}
+.social :link,.social :visited,
+#comments .social :link,#comments .social :visited{border:0;}
+
+#about .social{text-align:right;}
+#about .social,#help .social{margin-top:-8px;}
+
+#foot2{font-size:95%;}
+
+
+.social img{max-width:20px;}
+
+#edtoolbar{text-align:center;font-size:85%;}
+#edtoolbar .ed_button,#edtoolbar .ed_button_pressed{padding:0 1px;border:1px solid #99b382;margin:1px;}
+#edtoolbar .ed_button{background:#ddf1cd;}
+#edtoolbar .ed_button:hover,#edtoolbar .ed_button_pressed{background:#c1d8ae;}
+
+.fade,.fade *{color:#aaa;}
+
+.more .note,li .note{color:#666;}
+.ans .note{float:right;font-weight:normal;font-size:90%;color:#777;padding:2px 5px;}
+
+.anav{font-size:90%;}
+.anav span{display:block;}
+.anav .1{text-align:left;}
+.anav .2{text-align:right;}
+
+#about #contactform{text-align:center;}
+#about #contactform form{text-align:left;}
+#about #contactform .forminput1,#about #contactform .forminput2{text-align:left;width:100%;margin:0;}
+#about #contactform .forminput2{float:none;}
+#about #contactform textarea{min-height:200px;}
+
+.statusmsg em{color:#c55;font-style:normal;font-weight:bold;}
+.statusmsg{color:#800;}
+
+.authorarchivelist h2{padding:4px 7px;font-size:95%;}
+.authorarchivelist li{padding-left:25px;}
+
+.authorarchivelist .arcat{margin-top:0;}
+.authorarchivelist .ardate{text-align:right;margin-top:-.2em;}
+
+.archive .ardate{font-size:95%;}
+
+.arate li{list-style:none;padding:0 4px;display:inline;}
+
+.archivestate .note{font-weight:bold;padding:8px 9px;border-bottom:2px solid #cad8df;}
+
+#flag{margin-top:20px;}
+form.zemContactForm,#flags fieldset,#flags legend,#flag fieldset,#flag legend{border:0;}
+#flag *{display:inline;}
+#flag label.zemTextarea{padding-right:3px;}
+#flags legend,#flag legend{display:none;}
+
+#flag select{margin-bottom:3px;}
+#flag input.Reason,#flag textarea,#flags textarea{width:150px;}
+#flag option{padding:1px 2px;}
+
+#flag select option,#flag label,#flag textarea{display:block;}
+
+#flag .flagreaplain{float:left;}
+#flag .flagname{float:left;} 
+#flag button[type="submit"]{text-align:center;float:left;}
+#flag .flagname,button.zemSubmit{margin-left:20px;}
+
+/* #flag{float:right;width:160px;} */
+
+.flaghead{font-weight:bold;}
+
+#flag *{text-align:left;}
+#flag button[type="submit"]{text-align:center;margin-right:1px;}
+
+#flags textarea{margin-bottom:2px;}
+
+.topnotice{margin:8px;}
+.topnotice,.topnotice a{color:red;}
+
+#cse-search-results{padding-left:0 20px 30px 30px;margin:0 0 50px 30px;}

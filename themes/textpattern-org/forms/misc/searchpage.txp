@@ -1,0 +1,36 @@
+<div id="cse-search-results"></div>
+<script type="text/javascript">
+  var googleSearchIframeName = "cse-search-results";
+  var googleSearchFormName = "cse-search-box";
+  var googleSearchFrameWidth = 800;
+  var googleSearchDomain = "www.google.com";
+  var googleSearchPath = "/cse";
+</script>
+<script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
+
+
+<txp:zem_ir group="boxwide">Textpattern.org Search results</txp:zem_ir>
+
+<div id="articlelisting" class="box">
+
+<txp:article limit="20" />
+
+<txp:rvm_if expr="numpages!='1'">
+<div id="pagination">
+
+<div class="acol1">
+<txp:zem_ir group="box">Pagination</txp:zem_ir>
+<p><txp:search_result_count text="search results" /></p>
+</div><!-- .acol1 -->
+
+<div class="acol2">
+<txp:output_form form="gnav" />
+</div><!-- .acol2 -->
+
+</div><!-- #pagination -->
+</txp:rvm_if>
+
+<div class="archiveoffer acol2">
+All <txp:mdn_count section="mods,plugins,templates,tips,tutorials" /> articles are stored in the treasure rooms that are the <a href="<txp:site_url />archives">Archives</a>.</div><!-- .archiveoffer -->
+
+</div><!-- #articlelisting -->

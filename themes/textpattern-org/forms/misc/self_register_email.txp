@@ -1,0 +1,12 @@
+Dear <txp:mem_name />,
+
+Thank you for registering at <txp:mem_siteurl />.
+
+Your login name: <txp:mem_username />
+Your password: <txp:mem_password />
+
+If you have any questions please reply to this email address.
+
+Sincerely,
+<txp:mem_admin_name />
+<txp:mem_admin_email />

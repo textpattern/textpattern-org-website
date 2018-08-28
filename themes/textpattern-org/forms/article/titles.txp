@@ -1,0 +1,8 @@
+<div class="article atagarticle" id="a<txp:article_id />"><div class="inarticle">
+<txp:if_article_list>
+<h2><txp:permlink><txp:title /></txp:permlink></h2>
+<txp:else />
+<h2 class="stat"><txp:title /></h2>
+</txp:if_article_list>
+
+<txp:if_article_list><txp:rvm_if expr="custom_1"><h4><txp:rei_show_custom customid="1" /></h4></txp:rvm_if></txp:if_article_list><txp:rss_article_edit>[edit]</txp:rss_article_edit></div></div>

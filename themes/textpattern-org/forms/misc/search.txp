@@ -1,0 +1,39 @@
+		<div id="search" class="box">
+		
+<txp:if_section name="search"><txp:zem_ir group="boxwide" wrap="0">Enter your search query for textpattern.org:</txp:zem_ir>
+
+		<form action="/" method="get"><input type="text" name="q" value="" size="15" /></form>
+
+<txp:zem_ir group="box">or search Google:</txp:zem_ir>
+
+<form action="/" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2231425303751044:a5u9s6-xf09" />
+    <input type="hidden" name="cof" value="FORID:9" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="31" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+<txp:else />
+<txp:zem_ir group="boxwide">Search textpattern.org:</txp:zem_ir>
+
+		<form action="/" method="get"><input type="text" name="q" value="" size="15" /></form>
+<txp:zem_ir group="box">or search Google:</txp:zem_ir>
+
+<form action="/" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2231425303751044:a5u9s6-xf09" />
+    <input type="hidden" name="cof" value="FORID:9" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="31" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+		<div class="more" style="margin:3px;"><a href="<txp:site_url />search">More search options</a></div><!-- .more -->
+
+</txp:if_section>
+
+		</div><!-- #boxsearch -->

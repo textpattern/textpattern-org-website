@@ -1,0 +1,8 @@
+<txp:zem_nth step="1" of="2"><div class="acomment a"></txp:zem_nth>
+<txp:zem_nth step="2" of="2"><div class="acomment b"></txp:zem_nth>
+
+	<div class="cauthor"><txp:comment_name link="1" />:</div>
+	<txp:cbs_gravatar size="44" class="gravatar" link="true" />
+	<div class="ctext"><txp:comment_message /></div>
+	<div class="cfoot"><txp:comment_permlink>posted on <txp:comment_time format="%d %B %Y, %H:%M %p" gmt="0" /></txp:comment_permlink></div>
+</div><!-- .acomment -->

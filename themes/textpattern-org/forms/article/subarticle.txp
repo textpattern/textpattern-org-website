@@ -1,0 +1,16 @@
+<div class="subarticle" id="a<txp:article_id />">
+<h5><txp:permlink><txp:title /></txp:permlink></h5>
+		<txp:mdn_if_custom field="1" notempty="1"><h4><txp:rei_show_custom customid="1" /></h4></txp:mdn_if_custom>
+
+			<txp:if_article_list>
+				<txp:if_excerpt>
+					<txp:excerpt />
+				<txp:else />
+					<txp:body />
+				</txp:if_excerpt>
+			<txp:else />
+				<txp:body />
+			</txp:if_article_list>
+<txp:rss_article_edit>[edit]</txp:rss_article_edit>
+			<br class="ab" />
+</div><!-- .article -->

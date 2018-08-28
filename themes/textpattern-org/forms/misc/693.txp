@@ -1,0 +1,10 @@
+<txp:if_article_id id="693">
+<ul>
+<txp:article_custom id="694" form="titlelist" allowoverride="0" />
+<txp:article_custom id="695" form="titlelist" allowoverride="0" />
+<txp:article_custom id="700" form="titlelist" allowoverride="0" />
+<txp:article_custom id="696" form="titlelist" allowoverride="0" />
+<txp:article_custom id="697" form="titlelist" allowoverride="0" />
+<txp:article_custom id="709" form="titlelist" allowoverride="0" />
+</ul>
+</txp:if_article_id>

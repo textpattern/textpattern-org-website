@@ -1,0 +1,13 @@
+		<div id="mainlinks" class="box">
+		<txp:zem_ir group="box">Main Links</txp:zem_ir>
+<ul class="boxlist">
+	<li><a href="http://textpattern.com/">Main site</a></li>
+	<li><a href="http://textpattern.com/weblog">Weblog</a></li>
+	<li><a href="https://forum.textpattern.io/">Forum</a></li>
+<li><a href="http://textpattern.com/faq/">FAQ</a></li>
+	<li><a href="http://textpattern.net">Documentation</a><!-- <div class="sub">Textbook</div>--></li>
+	<li><a href="https://docs.textpattern.io/themes/">Themes</a>
+	</li>
+</ul>
+<txp:if_section name="links"><txp:else /><div class="more"><a href="<txp:site_url />links">More links</a></div></txp:if_section>
+		</div><!-- #mainlinks -->
