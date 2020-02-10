@@ -1,8 +1,0 @@
-<txp:zem_ir_set group="box" wraptag="h3" 
-font="BAARS.ttf" fontsize="14" color="#111" padding="7 7 2 7" position="left" wrap="160" />
-
-<txp:zem_ir_set group="boxwide" wraptag="h3" 
-font="BAARS.ttf" fontsize="14" color="#111" padding="7 7 2 7" position="left" wrap="260" />
-
-<txp:zem_ir_set group="boxar" wraptag="h3" 
-font="BAARS.ttf" fontsize="12" width="100%" color="#111" padding="7 7 2 7" position="left" wrap="160" trans="0" backgroundcolor="#C0D8E6"  />

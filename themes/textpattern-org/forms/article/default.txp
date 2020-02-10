@@ -1,150 +1,252 @@
-<div class="article main" id="a<txp:article_id />"><div class="inarticle">
+<div class="article main" id="a<txp:article_id />">
+	<div class="inarticle">
 
-<div class="articlekey">
-	<div class="atype"><txp:section link="y" title="1" /></div>
-<txp:rvm_if expr="category1 or category2">
+		<div class="articlekey">
+			<div class="atype">
+				<txp:section link="1" title="1" />
+			</div>
+			<txp:if_article_category>
+
+				<txp:if_section name="plugins,mods,tutorials,tips,templates">
+					<txp:if_individual_article>
+						<div class="atitle">Categories:</div>
+					</txp:if_individual_article>
+					<div class="acat">
+						<txp:if_article_category number="1">
+							<txp:if_article_category number="2">
+								<txp:category1 title link this_section /><br>
+								<txp:category2 title link this_section />
+							<txp:else />
+								<txp:category1 title link this_section />
+							</txp:if_article_category>
+						<txp:else />
+							<txp:category2 title link this_section />
+						</txp:if_article_category>
+					</div>
+				<txp:else />
+					<div class="acat">
+						<txp:if_article_category number="1">
+							<txp:if_article_category number="2">
+								<txp:category1 title link /><br>
+								<txp:category2 title link />
+							<txp:else />
+								<txp:category1 title link />
+							</txp:if_article_category>
+						<txp:else />
+							<txp:category2 title link />
+						</txp:if_article_category>
+					</div>
+				</txp:if_section>
+
+			</txp:if_article_category>
+
+			<txp:if_individual_article>
+
+				<txp:variable name="has_author_details"><txp:custom_field name="author_name" /><txp:custom_field name="author_www" /></txp:variable>
+				<txp:if_variable name="has_author_details">
+					<div class="atitle">Author:</div>
+					<div class="<txp:if_custom_field name="author_name">aauthor<txp:else />awebsite</txp:if_custom_field>">
+						<txp:if_custom_field name="author_www">
+							<a href="<txp:custom_field name="author_www" />">
+						</txp:if_custom_field>
+						<txp:if_custom_field name="author_name">
+							<txp:custom_field name="author_name" />
+						<txp:else />
+							Author's website
+						</txp:if_custom_field>
+						<txp:if_custom_field name="author_www">
+							</a>
+						</txp:if_custom_field>
+
+					</div>
+				</txp:if_variable>
+
+				<txp:if_custom_field name="current_version">
+					<div class="atitle">Current version:</div>
+					<div class="aversion">
+						<txp:custom_field name="current_version" />
+					</div>
+				</txp:if_custom_field>
+
+				<div class="atitle">About It:</div>
+
+				<div class="ainfo">
+					<txp:if_custom_field name="info_url">
+						<txp:if_section name="tips,tutorials">
+							<strong><a href="<txp:custom_field name="info_url" />">Information URL</a></strong><br />
+						<txp:else />
+							<a href="<txp:custom_field name="info_url" />">Information URL</a>
+						</txp:if_section>
+						<br />
+					</txp:if_custom_field>
+					<txp:if_comments>
+						<a href="#thecomments">
+							<txp:comments_count /> comments
+						</a>
+						<br />
+					</txp:if_comments>
+					<txp:if_custom_field name="forum_thread">
+						<a href="<txp:custom_field name="forum_thread" />">Forum thread</a>
+						<br />
+					</txp:if_custom_field>
+					<txp:permlink>Article permalink</txp:permlink>
+					<br />
+					<txp:if_individual_article>
+					    <txp:if_logged_in>
+					        <a href="<txp:site_url type="admin" />?event=article&step=edit&ID=<txp:article_id />">Author's edit link</a>
+					    </txp:if_logged_in>
+					</txp:if_individual_article>
+				</div>
+				<!-- .ainfo -->
+
+				<txp:if_custom_field name="download_url">
+					<div class="atitle">Get it:</div>
+					<div class="adownload">
+						<a href="<txp:custom_field name="download_url" />">Download File</a></div>
+				</txp:if_custom_field>
+
+				<div class="atitle">Rate it:</div>
+				<div class="arate">
+					<txp:wlk_helpful />
+				</div>
+
+				<div class="atitle">Flag it:</div>
+				<p class="aflag" style="padding-left:8px;">If you'd like to provide updated information and do not have access to directly edit, please <a href="http://textpattern.org/contact/683/contact">contact the site admin</a>; thanks!</p>
+				<txp:hide>
+					<div class="atitle">Flag it:</div>
+					<div id="flags" class="aflag">
+						<txp:com_connect to="admin@textpattern.org" form="^flagarticlesmall" subject="flag waved" from="TXPorgFlagRobot" thanks="Thanks, your flag has been waved" />
+					</div>
+				</txp:hide>
+
+			</txp:if_individual_article>
+
+			<txp:if_section name="default">
+				<txp:if_article_list type="author, c, month, pg, q" not>
+					<div class="apost">posted
+						<txp:posted format="%d %b" />
+					</div>
+				</txp:if_article_list>
+			</txp:if_section>
+
+			<txp:if_individual_article>
+			    <txp:if_logged_in>
+			        <a href="<txp:site_url type="admin" />?event=article&step=edit&ID=<txp:article_id />">[edit]</a>
+			    </txp:if_logged_in>
+			</txp:if_individual_article>
+
+		</div>
+		<!-- .articlekey -->
+
+		<txp:if_article_list>
+			<h2><txp:permlink><txp:title /></txp:permlink></h2>
+		<txp:else />
+			<h2 class="stat"><txp:title /></h2>
+		</txp:if_article_list>
+
+		<txp:if_article_list>
+			<txp:custom_field name="plugin_description" wraptag="h4" />
+		</txp:if_article_list>
+
+		<div class="abody">
+			<txp:if_article_list>
+
+				<txp:if_section name="templates">
+
+					<txp:smd_wrap_all wraptag="p" transform="strip_tags, cut|100|15w|&hellip;"><txp:body /></txp:smd_wrap_all>
+
+				<txp:else />
+
+					<txp:if_excerpt>
+						<txp:excerpt />
+					<txp:else />
+						<txp:smd_wrap_all wraptag="p" transform="strip_tags, cut|350|15w|&hellip;"><txp:body /></txp:smd_wrap_all>
+					</txp:if_excerpt>
+
+				</txp:if_section>
+
+				<txp:permlink wraptag="div" class="more">more details &gt;</txp:permlink>
+
+			<txp:else />
+
+				<txp:body />
+
+			</txp:if_article_list>
 
 
-<txp:if_section name="plugins,mods,tutorials,tips,templates">
+			<txp:if_individual_article>
+				<div class="articlefoot">
 
-<txp:if_individual_article><div class="atitle">Categories:</div></txp:if_individual_article>
-<div class="acat"><txp:category1 link="y" title="1" this_section="1" /><br /><txp:category2 link="y" title="1" this_section="1" /></div>
-<txp:else />
-<div class="acat"><a href="<txp:site_url />category/<txp:category1 />"><txp:category1 title="1" /></a><br /><a href="<txp:site_url />category/<txp:category2 />"><txp:category2 title="1" /></a></div>
-</txp:if_section>
+<txp:hide>
+						<br />
+						<div class="acompat">Known compatibility with:
+							<div class="arev">rc1, 4.0 </div> <span class="helpnote"><a href="#helpfile">[ ? ]</a></span></div>
+						<!-- .acompat -->
+</txp:hide>
 
+					<div class="acompat hide">Article Request Count:
+						<div class="arev">
+							<a href="<txp:site_url />about#articlerequestcount">
+								<txp:dzd_counter_view custom_field="pageviews" />
+							</a>
+						</div>
+					</div>
+					<!-- .acompat -->
 
-</txp:rvm_if>
+					<txp:if_custom_field name="state">
+						<div class="statusmsg">
+							<p>
+								<em>Archived</em> <span class="helpnote"><a href="/help#a910">[?]</a></span>:
+								<txp:custom_field name="state" />
+							</p>
+						</div>
+						<!-- status -->
+					</txp:if_custom_field>
 
-<txp:if_individual_article>
+					<txp:tru_tags_if_has_tags>
+						<div class="atitle">Keywords/tags:</div>
+						<div class="akeywords">
 
-<txp:rvm_if expr="custom_2 or custom_4">
-<div class="atitle">Author:</div>
+							<txp:tru_tags_from_article />
+						</div>
+					</txp:tru_tags_if_has_tags>
 
-<txp:rvm_if2 expr="custom_2 and custom_4">
-<div class="aauthor"><a href="<txp:rei_show_custom customid="4" />"><txp:rei_show_custom customid="2" /></a></div>
-</txp:rvm_if2>
-
-<txp:rvm_if3 expr="custom_2 and !custom_4">
-<div class="aauthor"><txp:rei_show_custom customid="2" /></div>
-</txp:rvm_if3>
-
-<txp:rvm_if4 expr="custom_4 and !custom_2">
-<div class="awebsite"><a href="<txp:rei_show_custom customid="4" />">Author's website</a></div></txp:rvm_if4>
-
-</txp:rvm_if>
-
-<txp:rvm_if expr="custom_8">
-<div class="atitle">Current version:</div> 
-	<div class="aversion"><txp:rei_show_custom customid="8" /></div></txp:rvm_if>
-
-<div class="atitle">About It:</div>
-
-<div class="ainfo">
-<txp:mdn_if_custom field="3" notempty="1">
-<txp:if_section name="tips,tutorials">
-<strong><a href="<txp:rei_show_custom customid="3" />">Information URL</a></strong><br />
-<txp:else />
-<a href="<txp:rei_show_custom customid="3" />">Information URL</a>
-</txp:if_section>
-<br /></txp:mdn_if_custom>
-<txp:if_comments>	<a href="#thecomments"><txp:comments_count /> comments</a><br /></txp:if_comments>
-	<txp:mdn_if_custom field="7" notempty="1"><a href="<txp:rei_show_custom customid="7" />">Forum thread</a><br /></txp:mdn_if_custom>
-<txp:permlink>Article permalink</txp:permlink><br />
-<a href="http://textpattern.org/textpattern/index.php?event=article&#38;step=edit&#38;ID=<txp:article_id />">Author's edit link</a>
-	</div><!-- .ainfo -->
-
-<txp:rvm_if expr="custom_5"><div class="atitle">Get it:</div><div class="adownload">
-<a href="<txp:rei_show_custom customid="5" />">Download File</a></div></txp:rvm_if>
-
-<div class="atitle">Rate it:</div><div class="arate">
-<txp:wlk_helpful /></div>
-
-<div class="atitle">Flag it:</div>
-<p class="aflag" style="padding-left:8px;">If you'd like to provide updated information and do not have access to directly edit, please <a href="http://textpattern.org/contact/683/contact">contact the site admin</a>; thanks!</p>
-<txp:hide><div class="atitle">Flag it:</div>
-<div id="flags" class="aflag"><txp:zem_contact to="admin@textpattern.org" form="^flagarticlesmall" subject="flag waved" from="TXPorgFlagRobot" thanks="Thanks, your flag has been waved"  /></div></txp:hide>
-
-</txp:if_individual_article>
-
-<txp:glx_if_frontpage>
-	<div class="apost">posted <txp:posted format="%d %b" /></div>
-</txp:glx_if_frontpage>
-<txp:rss_article_edit>[edit]</txp:rss_article_edit>
-
-</div><!-- .articlekey -->
-
-<txp:if_article_list>
-<h2><txp:permlink><txp:title /></txp:permlink></h2>
-<txp:else />
-<h2 class="stat"><txp:title /></h2>
-</txp:if_article_list>
-
-<txp:if_article_list><txp:rvm_if expr="custom_1"><h4><txp:rei_show_custom customid="1" /></h4></txp:rvm_if></txp:if_article_list>
-
-<div class="abody">
-<txp:if_article_list>
-
-<txp:mdn_if_section section="templates">
-<txp:rss_auto_excerpt length="100" linktext="more details &gt;" linkwraptag="div" linkclass="more" />
-</txp:mdn_if_section>
-
-<txp:mdn_if_section notsection="templates">
-
-<txp:if_excerpt>
-<txp:excerpt />
-<div class="more"><txp:permlink>more details &gt;</txp:permlink></div>
-<txp:else />
-  <txp:rss_auto_excerpt length="350" linktext="more details &gt;" ending="..." linkwraptag="div" linkclass="more" />
-</txp:if_excerpt>
-
-</txp:mdn_if_section>
-
-<txp:else />
-<txp:body />
-
-</txp:if_article_list>
+					<div class="apostfoot">
+						<txp:if_custom_field name="release_date">
+							<div class="apost">
+								<div class="atitle">Initially released:</div>
+								<txp:custom_field name="release_date" />
+							</div>
+						</txp:if_custom_field>
+						<div class="apost">
+							<div class="atitle">Posted here:</div>
+							<txp:posted format="%d %b %Y" />
+						</div>
+						<txp:evaluate query='string(*[''<txp:modified format="%s" />'' > ''<txp:posted format="%s" />''])'>
+							<div class="apost">
+								<div class="atitle">Article modified:</div>
+								<txp:modified format="%d %b %Y" />
+							</div>
+						</txp:evaluate>
+					</div>
+					<!-- .apostfoot -->
 
 
-<txp:if_individual_article>
-<div class="articlefoot">
+				</div>
+				<!-- .articlefoot -->
+			</txp:if_individual_article>
 
-<txp:anc_hide>
-<br />
-
-<div class="acompat">Known compatibility with: 
-<div class="arev">rc1, 4.0 </div> <span class="helpnote"><a href="#helpfile">[ ? ]</a></span></div><!-- .acompat --></txp:anc_hide>
-
-<div class="acompat hide">Article Request Count: 
-<div class="arev"><a href="<txp:site_url />about#articlerequestcount"><txp:rsx_request_count no_output="1" /></a></div></div><!-- .acompat -->
-
-<txp:rvm_if expr="custom_9">
-<div class="statusmsg"><p>
-<em>Archived</em> <span class="helpnote"><a href="/help#a910">[?]</a></span>: <txp:rei_show_custom customid="9" />
-</p></div><!-- status -->
-</txp:rvm_if>
-
-<txp:tru_tags_if_has_tags>
-<div class="atitle">Keywords/tags:</div><div class="akeywords">
-
- <txp:tru_tags_from_article />
-</div></txp:tru_tags_if_has_tags>
-
-<div class="apostfoot">
-<txp:rvm_if expr="custom_6"><div class="apost"><div class="atitle">Initially released:</div> <txp:rei_show_custom customid="6" /></div></txp:rvm_if>
-<div class="apost"><div class="atitle">Posted here:</div> <txp:posted format="%d %b %Y" /></div>
-<div class="apost"><div class="atitle"><txp:ob1_modified output="differs" starttext="Article modified:" format=" " /></div><txp:ob1_modified output="differs" format="d M Y" /></div>
-</div><!-- .apostfoot -->
-
-
-</div><!-- .articlefoot -->
-</txp:if_individual_article>
-
-<br class="ab" />
-</div><!-- .abody -->
-</div><!-- .inarticle -->
-
-<txp:if_individual_article>
-<txp:output_form form="#comments" />
-</txp:if_individual_article>
-</div><!-- .article -->
+			<br class="ab" />
+		</div>
+		<!-- .abody -->
+	</div>
+	<!-- .inarticle -->
+<txp:hide>
+	<txp:if_individual_article>
+		<txp:if_comments>
+			<txp:output_form form="comments" />
+		</txp:if_comments>
+	</txp:if_individual_article>
+</txp:hide>
+</div>
+<!-- .article -->

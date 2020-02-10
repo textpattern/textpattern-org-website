@@ -1,9 +1,5 @@
 <txp:comments_error wraptag="ul" break="li" />
 
-<txp:comments_error wraptag="ul" break="li" />
-
-<txp:comments_error wraptag="ul" break="li" />
-
 <table cellpadding="4" cellspacing="0" border="0">
 
 <tr>
@@ -17,7 +13,7 @@
 
 	<td>
 		<txp:comment_remember />
-	</td> 
+	</td>
 </tr>
 
 <tr>
@@ -30,7 +26,7 @@
 	</td>
 </tr>
 
-<tr> 
+<tr>
 	<td align="right">
 		<label for="comment_web_input"><txp:text item="comment_web" /></label>
 	</td>

@@ -1,5 +1,13 @@
-<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth><txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth>
-<div class="clatitle"><txp:permlink><txp:title /></txp:permlink></div>
-<div class="clcmessage"><txp:asv_message striptags="y" maxwords="10" wraptag="p" /></div>
-<div class="clcauthor">~<txp:comment_permlink><txp:comment_name link="0" /></txp:comment_permlink></div>
+
+    <li class="a">
+
+    <div class="clatitle">
+        <txp:permlink><txp:title /></txp:permlink>
+    </div>
+    <div class="clcmessage">
+        <txp:asv_message striptags="y" maxwords="10" wraptag="p" />
+    </div>
+    <div class="clcauthor">~
+        <txp:comment_permlink><txp:comment_name link="0" /></txp:comment_permlink>
+    </div>
 </li>

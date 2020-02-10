@@ -1,39 +1,46 @@
 <txp:if_article_list>
-<div id="articlelisting" class="box">
+	<div id="articlelisting" class="box">
 
-<txp:article limit="30" />
+		<txp:article limit="30" />
 
-<txp:rvm_if expr="numpages!='1'">
-<div id="pagination">
+		<txp:variable name="numpages"><txp:article_custom section='<txp:section />' pageby="30" pgonly /></txp:variable>
+        <txp:if_variable name="numpages" value="1" not>
+			<div id="pagination">
 
-<div class="acol1">
-<txp:zem_ir group="box">Pagination</txp:zem_ir>
-<p><txp:mdn_count category="#" section="#"/> articles</p>
-</div><!-- .acol1 -->
+				<div class="acol1">
+					<h3>Pagination</h3>
+					<p>
+						<txp:article_custom section='<txp:section />' category='<txp:category />' pageby="1" pgonly /> articles</p>
+				</div>
+				<!-- .acol1 -->
 
 
-<div class="acol2">
+				<div class="acol2">
+					<txp:output_form form="gnav" />
+				</div>
+				<!-- .acol2 -->
 
-<txp:output_form form="gnav" />
+			</div>
+			<!-- #pagination -->
+		</txp:if_variable>
 
-</div><!-- .acol2 -->
+		<div class="archiveoffer acol2">
+			All <txp:article_custom section="mods,plugins,templates,tips,tutorials" pageby="1" pgonly /> articles are stored in the treasure rooms that are the <a href="<txp:site_url />archives">Archives</a>.
+		</div>
+		<!-- .archiveoffer -->
 
-</div><!-- #pagination -->
-</txp:rvm_if>
-
-<div class="archiveoffer acol2">
-All <txp:mdn_count section="mods,plugins,templates,tips,tutorials" /> articles are stored in the treasure rooms that are the <a href="<txp:site_url />archives">Archives</a>.</div><!-- .archiveoffer -->
-
-</div><!-- #articlelisting -->
+	</div>
+	<!-- #articlelisting -->
 
 </txp:if_article_list>
 
 <txp:if_individual_article>
 
-<div class="box">
-<txp:article />
+	<div class="box">
+		<txp:article />
+		<div class="archiveoffer acol2">You know you want to visit the <a href="<txp:site_url />archives">Archives</a>.</div>
+		<!-- .col2 -->
 
-		<div class="archiveoffer acol2">You know you want to visit the <a href="<txp:site_url />archives">Archives</a>.</div><!-- .col2 -->
-
-</div><!-- .box -->
+	</div>
+	<!-- .box -->
 </txp:if_individual_article>

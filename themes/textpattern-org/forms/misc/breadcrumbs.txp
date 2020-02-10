@@ -1,82 +1,142 @@
 <div class="breadcrumbs">
-	<a href="<txp:link_to_home />">Home</a> &#8594; 
+	<a href="<txp:link_to_home />">Home</a>
+	<span class="breadcrumb-separator"></span>
 
-<txp:if_individual_article>
-	<txp:if_section name="misc,about,tags,help,notices,contact,search,comments,state">
-		<txp:mdn_if_section notsection="about">
-			<a href="/about">About</a> &#8594; 
-		</txp:mdn_if_section>
-		<txp:mdn_if_section notsection="misc">
-			<a class="active" href="<txp:site_url /><txp:section />"><txp:section title="1" /></a> &#8594; 
-		</txp:mdn_if_section>
-		<txp:mdn_if_section section="misc">
-<txp:if_article_id id="694,695,696,700,697,709">
-<txp:zem_link href="693">About this site</txp:zem_link> &#8594;
-</txp:if_article_id>
-		</txp:mdn_if_section>
-	<txp:else />
-		<a href="<txp:site_url />archives">Directory</a> &#8594; 
-<a href="<txp:site_url />archives/?section=<txp:section />"><txp:section title="1" /> directory</a> &#8594; <a class="active" href="<txp:site_url /><txp:section />"><txp:section title="1" /></a> &#8594;
-	</txp:if_section>
-</txp:if_individual_article>
+	<txp:if_individual_article>
 
-<txp:if_article_list>
+		<txp:if_section name="misc,about,tags,help,notices,contact,search,comments,state">
 
-	<txp:if_section name="links,help,archives,categoryarchive,authorarchive,datearchive,links,register,tags,about,misc,notices,search,comments,state">
+			<txp:if_section name="about" not>
+				<a href="/about">About</a>
+				<span class="breadcrumb-separator"></span>
+			</txp:if_section>
+
+			<txp:if_section name="misc" not>
+				<a class="active" href="<txp:site_url /><txp:section />">
+					<txp:section title="1" />
+				</a>
+				<span class="breadcrumb-separator"></span>
+			</txp:if_section>
+
+			<txp:if_section name="misc">
+				<txp:if_article_id id="694,695,696,700,697,709">
+					<txp:permlink id="693">About this site</txp:permlink>
+					<span class="breadcrumb-separator"></span>
+				</txp:if_article_id>
+			</txp:if_section>
+
 		<txp:else />
-		<txp:if_category> 
-<txp:hide>
-	<txp:mdn_if_section notsection="default">
-			<a href="<txp:site_url /><txp:section />"><txp:section title="1" /></a> &#8594;
-</txp:mdn_if_section>
-				<span class="active"><txp:category title="1" /></span> &#8594;
-				<a href="<txp:site_url />categoryarchive?c=<txp:page_url type="c" />"><txp:category title="1" /> directory</a> 
-</txp:hide>
-			<txp:else />
-<txp:mdn_if_section section="contact">
-<a href="<txp:site_url />about">About</a> &#8594;
-				<span class="active"><txp:section title="1" /></span> 
-</txp:mdn_if_section>
 
-<txp:mdn_if_section notsection="contact">
-				<a class="active" href="<txp:site_url /><txp:section />"><txp:section title="1" /></a> &#8594;
-				<a href="<txp:site_url />archives/?section=<txp:section />"><txp:section title="1" /> directory</a>
-</txp:mdn_if_section>
+			<a href="<txp:site_url />archives">Directory</a>
+			<span class="breadcrumb-separator"></span>
+			<a href="<txp:site_url />archives/?section=<txp:section />">
+				<txp:section title="1" /> directory</a>
+				<span class="breadcrumb-separator"></span>
+			<a class="active" href="<txp:site_url /><txp:section />">
+				<txp:section title="1" />
+			</a>
+
+		</txp:if_section>
+
+	</txp:if_individual_article>
+
+	<txp:if_article_list>
+
+		<txp:if_section name="links,help,archives,categoryarchive,authorarchive,datearchive,links,register,tag,tags,about,misc,notices,search,comments,state">
+		<txp:else />
+			<txp:if_category>
+
+					<txp:if_section name="default" not>
+						<a href="<txp:site_url /><txp:section />">
+							<txp:section title="1" />
+						</a>
+						<span class="breadcrumb-separator"></span>
+					</txp:if_section>
+					<txp:if_section name="default">
+						<a href="<txp:site_url />tags">Resources by category</a>
+						<span class="breadcrumb-separator"></span>
+					</txp:if_section>
+					<span class="active"><txp:category title="1" /></span>
+
+					<a class="archivelink" href="<txp:site_url />categoryarchive?c=<txp:page_url type="c" />">
+						<txp:category title="1" /> directory
+					</a>
+
+			<txp:else />
+
+				<txp:if_section name="contact">
+					<a href="<txp:site_url />about">About</a>
+					<span class="breadcrumb-separator"></span>
+					<span class="active"><txp:section title="1" /></span>
+
+				<txp:else />
+
+					<a class="active" href="<txp:site_url /><txp:section />">
+						<txp:section title="1" />
+					</a>
+					<a class="archivelink" href="<txp:site_url />archives/?section=<txp:section />">
+						<txp:section title="1" /> directory
+					</a>
+				</txp:if_section>
 
 			</txp:if_category>
-	</txp:if_section>
+		</txp:if_section>
 
-<txp:if_section name="links,about,help,notices,search,comments">
-	<txp:mdn_if_section notsection="about,search,comments">
-		<a href="/about">About</a> &#8594;
-	</txp:mdn_if_section>
-	<a class="active" href="<txp:site_url /><txp:section />"><txp:section title="1" /></a>
-</txp:if_section>
+		<txp:if_section name="links,about,help,notices,search,comments">
+			<txp:if_section name="about,search,comments" not>
+				<a href="/about">About</a>
+				<span class="breadcrumb-separator"></span>
+			</txp:if_section>
+			<a class="active" href="<txp:site_url /><txp:section />">
+				<txp:section title="1" />
+			</a>
+		</txp:if_section>
 
-<txp:if_section name="about,help">
-	&#8594; <a href="/notices">Notices</a></txp:if_section>
+		<txp:if_section name="about,help">
+			<span class="breadcrumb-separator"></span>
+			<a href="/notices">Notices</a>
+		</txp:if_section>
 
-<txp:if_section name="about,notices">
-	&#8594; <a href="/help">Help</a></txp:if_section>
+		<txp:if_section name="about,notices">
+			<span class="breadcrumb-separator"></span>
+			<a href="/help">Help</a>
+		</txp:if_section>
 
-<txp:if_section name="tags">
-	<a class="active" href="/tags">Tag clouds</a></txp:if_section>
+		<txp:if_section name="tags">
+			<a class="active" href="/tags">Tag clouds</a>
+		</txp:if_section>
 
-<txp:if_section name="archives">
-		<a class="active" href="/archives">Directory</a></txp:if_section>
+		<txp:if_section name="tag">
+			<a href="<txp:site_url />tags" title="Choose tag from tag cloud">Keyword / Tag</a>
+			<span class="breadcrumb-separator"></span>
+			<span class="active"><txp:tru_tags_tag_parameter /></span>
+		</txp:if_section>
 
-<txp:if_section name="state,categoryarchive,datearchive,authorarchive,">
-	<a href="/archives">Directory</a> &#8594;
-	<txp:if_category>
-		<txp:else />
-			<a class="active" href="<txp:site_url /><txp:section />"><txp:section title="1" /></a>
-	</txp:if_category>
-	<txp:if_category>
-		<a href="/categoryarchive">by Category</a> &#8594;
-		<span class="active"><txp:category title="1" /></span>
-	</txp:if_category>
-</txp:if_section>
+		<txp:if_section name="archives">
+			<a<txp:if_variable name="section_filter" not> class="active"</txp:if_variable> href="/archives">Directory</a>
+			<txp:if_variable name="section_filter" value="" not>
+			<span class="breadcrumb-separator"></span>
+			<a href="/archives">by Section</a>
+			<span class="breadcrumb-separator"></span>
+			<span class="active"><txp:variable name="section_filter" /></span>
+			</txp:if_variable>
+		</txp:if_section>
 
-</txp:if_article_list>
+		<txp:if_section name="state,categoryarchive,datearchive,authorarchive">
+			<a href="/archives">Directory</a>
+			<span class="breadcrumb-separator"></span>
+			<txp:if_category>
+				<a href="/categoryarchive">by Category</a>
+				<span class="breadcrumb-separator"></span>
+				<span class="active"><txp:category title="1" /></span>
+			<txp:else />
+				<a class="active" href="<txp:site_url /><txp:section />">
+					<txp:section title="1" />
+				</a>
+			</txp:if_category>
+		</txp:if_section>
 
-</div><!-- .breadcrumbs -->
+	</txp:if_article_list>
+
+</div>
+<!-- .breadcrumbs -->

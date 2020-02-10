@@ -1,6 +1,12 @@
-<txp:if_different></ul></li>
-<li class="a"><txp:rei_show_custom customid="3" />
-<ul></txp:if_different>
-<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth>
-<txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth>
-<a href="#a<txp:article_id />"><txp:title /></a></li>
+<txp:if_different>
+    </ul>
+    </li>
+    <li class="a">
+        <txp:custom_field name="info_url" />
+        <ul>
+</txp:if_different>
+
+            <li class="a">
+
+                <a href="#a<txp:article_id />"><txp:title /></a>
+            </li>

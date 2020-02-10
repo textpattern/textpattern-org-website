@@ -1,14 +1,25 @@
 <txp:smd_if field="state" operator="contains" value="orphan">
+    <li class="a">
+        <txp:permlink><txp:title /></txp:permlink>
 
-<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth>
-<txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth>
+        <span class="arcat">
 
-<txp:permlink><txp:title /></txp:permlink><span class="arcat"> 
-
-<span class="statusmsg"><txp:rei_show_custom customid="9" /></span>  &middot; <!-- status -->
-
-  <span class="ardate"><txp:ob1_modified format="j M Y"  /></span>   &middot; <txp:rvm_if2 expr="category1 or category2"><txp:asy_showcat link="true" /></txp:rvm_if2></span>
-<txp:mdn_if_custom field="1" notempty="1"><div class="ardesc"><txp:rei_show_custom /></div></txp:mdn_if_custom>
-
-</li>
+            <txp:custom_field name="state" wraptag="span" class="statusmsg" /> &middot;
+            <!-- status -->
+            <txp:modified format="%e %b %Y" wraptag="span" class="ardate" /> &middot;
+            <txp:if_article_category>
+                <txp:if_article_category number="1">
+                    <txp:if_article_category number="2">
+                        <txp:category1 title link />,
+                        <txp:category2 title link />
+                    <txp:else />
+                        <txp:category1 title link />
+                    </txp:if_article_category>
+                <txp:else />
+                    <txp:category2 title link />
+                </txp:if_article_category>
+            </txp:if_article_category>
+        </span>
+        <txp:custom_field name="plugin_description" wraptag="div" class="ardesc" />
+    </li>
 </txp:smd_if>

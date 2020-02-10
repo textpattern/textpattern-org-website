@@ -1,0 +1,129 @@
+<txp:output_form form="head" />
+
+<body id="top">
+	<txp:output_form form="inbody" />
+
+	<div id="links">
+		<div id="s<txp:section />page">
+			<div id="inbody">
+				<div id="frame">
+
+					<div id="container">
+
+						<txp:output_form form="header" />
+						<txp:output_form form="accessibility" />
+						<txp:output_form form="mainnav" />
+						<txp:output_form form="window" />
+
+						<txp:output_form form="breadcrumbs" />
+
+						<div id="col1">
+							<div class="incol">
+
+								<txp:output_form form="search" />
+
+								<txp:if_section name="tags">
+									<div id="helpbox" class="box">
+										<h3>Tags ?</h3>
+										<ul class="boxlist">
+											<li><a href="<txp:site_url />help#a688">What are tags?</a></li>
+											<li><a href="<txp:site_url />help#a688">What's a tag cloud?</a></li>
+											<li><a href="<txp:site_url />help#a689">How are these clouds generated?</a></li>
+											<li><a href="<txp:site_url />help#a705">How do you tag articles?</a></li>
+											<li><a href="<txp:site_url />categoryarchive?c=keywordstags">keywords/tags category archive.</a></li>
+										</ul>
+										</li>
+										</ul>
+									</div>
+									<!-- #helpbox -->
+								</txp:if_section>
+
+							</div>
+							<!-- .incol -->
+						</div>
+						<!-- #col1 -->
+
+						<div id="maincol">
+							<div class="incol">
+								<div id="content">
+
+									<txp:if_section name="tag">
+
+										<div>
+											<h3>Plugins tagged with “<txp:tru_tags_tag_parameter />”</h3>
+
+											<txp:tru_tags_handler section="mods,plugins,tips,tutorials,templates" break="" form="titles" allowoverride="0" limit="999999" />
+
+
+
+										</div>
+										<!-- #tagclouds -->
+
+									</txp:if_section>
+
+									</div>
+									<!-- #content -->
+								</div>
+								<!-- .incol -->
+							</div>
+							<!-- #maincol -->
+
+							<!-- col2 -->
+							<div id="col2">
+								<div class="incol">
+
+
+									<txp:if_section name="comments">
+
+										<h3>No comments yet</h3>
+										<div class="box">
+											<ul class="boxlist">
+												<txp:asv_random_article form="titlelist_simple" limit="20" />
+											</ul>
+										</div>
+
+
+
+
+
+
+
+
+
+										<txp:else />
+										<h3>Category cloud</h3>
+										<div class="tags">
+
+											<txp:rss_category_cloud break="" wraptag="" />
+										</div>
+									</txp:if_section>
+
+
+
+
+								</div>
+								<!-- .incol -->
+							</div>
+							<!-- #col2 -->
+
+
+							<txp:output_form form="footer" />
+
+						</div>
+						<!-- #container -->
+
+						<txp:output_form form="base" />
+
+					</div>
+					<!-- #frame -->
+
+				</div>
+				<!-- #inbody -->
+			</div>
+			<!-- #ssectionpage -->
+		</div>
+		<!-- #links -->
+		<txp:output_form form="all_bottom" />
+	</body>
+
+</html>

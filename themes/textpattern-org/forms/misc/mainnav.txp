@@ -1,12 +1,12 @@
-	<div id="mainnav">
-<ul>
-<li<txp:glx_hl_current_section section="default,article" />><txp:link_to_home>Home</txp:link_to_home></li>
-<li<txp:glx_hl_current_section section="mods" />><a href="<txp:site_url />mods">Mods  <span class="note">(<txp:mdn_count section="mods"  />)</span></a></li>
-<li<txp:glx_hl_current_section section="plugins" />><a href="<txp:site_url />plugins">Plugins <span class="note">(<txp:mdn_count section="plugins"  />)</span></a></li>
-<li<txp:glx_hl_current_section section="templates" />><a href="<txp:site_url />templates">Templates  <span class="note">(<txp:mdn_count section="templates"  />)</span></a></li>
-<li<txp:glx_hl_current_section section="tips" />><a href="<txp:site_url />tips/">Tips  <span class="note">(<txp:mdn_count section="tips"  />)</span></a></li>
-<li<txp:glx_hl_current_section section="tutorials" />><a href="<txp:site_url />tutorials">Tutorials  <span class="note">(<txp:mdn_count section="tutorials"  />)</span></a></li>
-<li<txp:glx_hl_current_section section="about" />><a href="<txp:site_url />about/">About</a></li>
-<li<txp:glx_hl_current_section section="archive" />><a href="<txp:site_url />archives/">Directory</a></li>
-</ul>
-	</div><!-- #mainnav -->
+<div id="mainnav">
+	<ul>
+		<li><txp:link_to_home>Home</txp:link_to_home></li>
+		<li><a href="/mods">Mods <span class="note">(<txp:article_custom section="mods" pageby="1" pgonly />)</span></a></li>
+		<li><a href="/plugins">Plugins <span class="note">(<txp:article_custom section="plugins" pageby="1" pgonly />)</span></a></li>
+		<li><a href="/templates">Templates <span class="note">(<txp:article_custom section="templates" pageby="1" pgonly />)</span></a></li>
+		<li><a href="/tips/">Tips <span class="note">(<txp:article_custom section="tips" pageby="1" pgonly />)</span></a></li>
+		<li><a href="/tutorials">Tutorials <span class="note">(<txp:article_custom section="tutorials" pageby="1" pgonly />)</span></a></li>
+		<li><a href="/about/">About</a></li>
+		<li><a href="/archives/">Directory</a></li>
+	</ul>
+</div><!-- #mainnav -->

@@ -1,69 +1,93 @@
 <txp:output_form form="head" />
+
 <body id="top">
-<txp:output_form form="inbody" />
 
-	<txp:if_article_list><div id="list"></txp:if_article_list>
-	<txp:if_individual_article><div id="page"></txp:if_individual_article>
-<txp:if_category><div id="list"><div id="scatpage"></txp:if_category>
-<div id="s<txp:section />page">
-<div id="inbody">
-<div id="frame">
+	<txp:if_article_list>
+		<div id="list">
+	</txp:if_article_list>
+	<txp:if_individual_article>
+		<div id="page">
+	</txp:if_individual_article>
+	<txp:if_category>
+		<div id="list">
+			<div id="scatpage">
+	</txp:if_category>
+	<div id="s<txp:section />page">
+		<div id="inbody">
+			<div id="frame">
 
-<div id="container">
+				<div id="container">
 
-<txp:output_form form="header" />
-<txp:output_form form="accessibility" />
-<txp:output_form form="mainnav" />
-<txp:output_form form="window" />
+					<txp:output_form form="header" />
+					<txp:output_form form="mainnav" />
+					<txp:output_form form="window" />
 
-<txp:output_form form="breadcrumbs" />
+					<txp:output_form form="breadcrumbs" />
 
-<div id="maincol">
-	<div class="incol">
-	<div id="content">
+					<div id="maincol">
+						<div class="incol">
+							<div id="content">
+<txp:hide>
+								<txp:if_category>
+									<txp:output_form form="catpage" />
+								</txp:if_category>
+</txp:hide>
+								<txp:output_form form="articles" />
 
+							</div>
+							<!-- #content -->
 
-<txp:anc_hide><txp:if_category><txp:output_form form="catpage" /></txp:if_category></txp:anc_hide>
+						</div>
+						<!-- .incol -->
+					</div>
+					<!-- #maincol -->
 
-<txp:output_form form="articles" />
+					<!-- col2 -->
+					<div id="col2">
+						<div class="incol">
 
-	</div><!-- #content -->
+							<txp:output_form form="search" />
 
-	</div><!-- .incol -->
-</div><!-- #maincol -->
+							<txp:if_section name="templates">
+								<div id="helpbox" class="box">
+									<h3>Visit</h3>
+									<ul class="boxlist">
+										<li><a href="https://textpattern.com/themes">Textpattern themes</a> for Textpattern themes.</li>
+									</ul>
+									<!-- .boxlist -->
+								</div>
+								<!-- #helpbox -->
+							</txp:if_section>
 
-<!-- col2 -->
-	<div id="col2">
-	<div class="incol">
+							<txp:output_form form="catlist" />
+<txp:hide>
+							<txp:output_form form="notfrontpage-relatedarticles" />
+</txp:hide>
+						</div>
+						<!-- .incol -->
+					</div>
+					<!-- #col2 -->
 
-<txp:output_form form="search" />
+					<txp:output_form form="footer" />
 
-<txp:if_section name="templates">
-<div id="helpbox" class="box">
-<txp:zem_ir group="box">Visit</txp:zem_ir>
-<ul class="boxlist">
-<li><a href="http://textgarden.org">TextGarden</a> for Textpattern themes.</li>
-</ul><!-- .boxlist -->
-</div><!-- #helpbox -->
-</txp:if_section>
+				</div>
+				<!-- #container -->
 
-<txp:output_form form="catlist" />
+				<txp:output_form form="base" />
 
-<txp:output_form form=".(notfrontpage)relatedarticles+" />
-
-	</div><!-- .incol -->
-	</div><!-- #col2 -->
-
-<txp:output_form form="footer" />
-
-</div><!-- #container -->
-
-<txp:output_form form="base" />
-
-</div><!-- #frame -->
-</div><!-- #inbody -->
-</div><!-- #ssectionpage -->
-</div><!-- #main or #page or #list --><txp:if_category></div><!-- #scatpage --></txp:if_category>
-<txp:output_form form="all_bottom" />
+			</div>
+			<!-- #frame -->
+		</div>
+		<!-- #inbody -->
+	</div>
+	<!-- #ssectionpage -->
+	</div>
+	<!-- #main or #page or #list -->
+	<txp:if_category>
+		</div>
+		<!-- #scatpage -->
+	</txp:if_category>
+	<txp:output_form form="all_bottom" />
 </body>
+
 </html>

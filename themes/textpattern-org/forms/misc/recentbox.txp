@@ -1,5 +1,5 @@
 <div id="recentbox" class="box">
-		<txp:zem_ir group="box">Articles</txp:zem_ir>
+		<h3>Articles</h3>
 <form action="">
 <select onchange="document.location=options[selectedIndex].value;">
 <option value="" selected="selected">Recently Posted &darr;</option>

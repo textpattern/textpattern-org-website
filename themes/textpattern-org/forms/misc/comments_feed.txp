@@ -1,0 +1,23 @@
+<txp:header value="text/xml" />
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+ <generator>http://textpattern.com/</generator>
+ <title><txp:site_name /></title>
+ <description><txp:site_name /> - comments</description>
+ <link><txp:site_url /></link>
+ <atom:link href="<txp:site_url />/comments_feed" rel="self" type="application/rss+xml" />
+ <pubDate><txp:php>echo safe_strftime('rfc822', get_lastmod());</txp:php></pubDate>
+
+ <txp:recent_comments break="item">
+     <title>Comment on <txp:title no_widow="0" /> by <txp:comment_name link="0" /></title>
+     <link><txp:comment_permlink /></link>
+     <guid><txp:comment_permlink /></guid>
+     <pubDate><txp:comment_time format="rfc822" /></pubDate>
+     <description><![CDATA[<txp:comment_message />]]></description>
+     <content:encoded><![CDATA[<txp:comment_message />]]></content:encoded>
+     <dc:creator><txp:comment_name /></dc:creator>
+ </txp:recent_comments>
+
+</channel>
+</rss>

@@ -1,145 +1,172 @@
-<!--
-<txp:php>
-</txp:php>
--->
-
 <txp:output_form form="head" />
+
 <body id="top">
-<txp:output_form form="inbody" />
-<div id="about">
-<txp:if_individual_article>
-	<div id="indipage">
-	<txp:else />
-	<div id="listpage">
-</txp:if_individual_article>
-<div id="inbody">
-<div id="frame">
-<div id="container">
-<txp:output_form form="header" />
-<txp:output_form form="accessibility" />
-<txp:output_form form="mainnav" />
-<txp:output_form form="window" />
-<txp:output_form form="breadcrumbs" />
-<div id="col1">
-	<div class="incol">
-<txp:if_section name="search">
-	<txp:output_form form="catbox" />
-<txp:else />
-	<txp:output_form form="search" />
-	<txp:output_form form="login" />
-</txp:if_section>
+	<txp:output_form form="inbody" />
+	<div id="about">
+		<txp:if_individual_article>
+			<div id="indipage">
+		<txp:else />
+			<div id="listpage">
+		</txp:if_individual_article>
+		<div id="inbody">
+			<div id="frame">
+				<div id="container">
+					<txp:output_form form="header" />
+					<txp:output_form form="accessibility" />
+					<txp:output_form form="mainnav" />
+					<txp:output_form form="window" />
+					<txp:output_form form="breadcrumbs" />
+					<div id="col1">
+						<div class="incol">
+							<txp:if_section name="search">
+								<txp:output_form form="catbox" />
+							<txp:else />
+								<txp:output_form form="search" />
+								<txp:output_form form="login" />
+							</txp:if_section>
 
+							<txp:output_form form="mainlinks" />
+						</div>
+						<!-- .incol -->
+					</div>
+					<!-- #col1 -->
+					<div id="maincol">
+						<div class="incol">
+							<div id="content">
+								<txp:article form="about" limit="999" allowoverride="0" />
 
+								<txp:if_section name="about">
+									<txp:if_article_list>
+										<txp:article_custom id="683" form="about" />
+									</txp:if_article_list>
+								</txp:if_section>
 
+								<txp:if_section name="search">
 
-		<txp:output_form form="mainlinks" />
-	</div><!-- .incol -->
-</div><!-- #col1 -->
-<div id="maincol">
-	<div class="incol">
-		<div id="content">
-			<txp:article form="about" limit="999" allowoverride="0" />
+									<div id="searchpageadvanced" style="text-align:center;">
+										<txp:output_form form="search" />
+<txp:hide>
+										<div style='margin: 10px; text-align: center; width: 160px;'>
+											<div style='float: left;font-size:90%;'>Powered by <a href='http://www.rollyo.com/'>Rollyo</a>:</div>
+											<form action='http://www.rollyo.com/search.html'>
+												<fieldset id='searchboxset' style='margin: 0 0 10px 0 !important; padding: 4px 0 0 0 !important; height: 62px; width: 160px; border: none;'><input type='text' size='30' style='background: #fff; font-family: helvetica, arial, sans-serif; color: #000; font-weight: normal; float: left; width: 108px; height: 14px; margin: 3px 0 4px 0px !important; font-size: 13px !important; vertical-align: middle;'
+													    name='q' value="" /><input type='image' src='http://rollyo.com/remote/btn-togo-search-ph2.png' alt='Go' style='margin: 2px 0 0 3px !important; float: left; border: none;' /> <br /><select id='rolls' name='sid' style='float: left; width: 158px; margin: 0 0 2px 0 !important; font-size: 12px;'><option value='257950' selected='selected'>Select Search Engine...</option><option value='257950'>Textpattern Resources</option><option value='web'>Search The Web</option></select>													<input type='hidden' name='togo-v' value='1' />
+													<div id='about' style='font-family: Arial, Helvetica, sans-serif; font-size: 9px;'></div>
+												</fieldset>
+											</form>
+										</div>
 
-<txp:if_section name="about">
-<txp:if_article_list>
-<txp:article_custom id="683" form="about" />
-</txp:if_article_list>
-</txp:if_section>
+										<div class="note">(This page is awaiting further development. <a href="<txp:site_url />contact">Would you like to help?</a>)</div>
+</txp:hide>
+									</div>
+									<!-- #searchpageadvanced -->
+								</txp:if_section>
+							</div>
+							<!-- #content -->
+						</div>
+						<!-- .incol -->
+					</div>
+					<!-- #maincol -->
+					<div id="col2">
+						<div class="incol">
 
-<txp:if_section name="search">
+							<txp:if_section name="admin">
+								<div id="noticesmenu" class="box">
+									<h3>Admin stuff</h3>
+									<div class="inbox bl">
+										<ul class="boxlist">
+											<txp:if_article_list>
+												<txp:article_custom form="noticesmenu" allowoverride="0" section="admin" />
+											<txp:else />
+												<txp:article_custom form="articlelistdate" allowoverride="0" section="admin" />
+											</txp:if_article_list>
+										</ul>
+									</div>
+									<!-- .inbox -->
+								</div>
+								<!-- #noticesmenu -->
+							</txp:if_section>
+							<!-- /admin section -->
 
-<div id="searchpageadvanced" style="text-align:center;">
-	<txp:output_form form="search" />
+							<txp:if_section name="notices">
+								<div id="noticesmenu" class="box">
+									<h3>Notices</h3>
+									<div class="inbox bl">
+										<ul class="boxlist">
+											<txp:if_article_list>
+												<txp:article_custom form="noticesmenu" allowoverride="0" section="notices" />
+											<txp:else />
+												<txp:article_custom form="articlelistdate" allowoverride="0" section="notices" />
+											</txp:if_article_list>
+										</ul>
+									</div>
+									<!-- .inbox -->
+								</div>
+								<!-- #noticesmenu -->
+							</txp:if_section>
+							<txp:if_section name="about,contact,misc">
+								<div id="aboutmenu" class="box">
+									<h3>About Menu</h3>
+									<div class="inbox bl">
+										<ul class="boxlist">
+											<txp:if_article_list>
+												<txp:if_section name="contact">
+													<txp:article_custom form="articlelist" allowoverride="0" section="about" />
+												</txp:if_section>
+												<txp:if_section name="contact" not>
+													<txp:article_custom form="aboutmenu" allowoverride="0" section="about" />
+												</txp:if_section>
+												<txp:article_custom id="683" form="titlelist" />
+											<txp:else />
+												<txp:article_custom form="articlelist" allowoverride="0" section="about" />
+												<txp:article_custom id="683" form="titlelist" />
+											</txp:if_article_list>
+										</ul>
+									</div>
+									<!-- .inbox -->
+								</div>
+								<!-- #aboutmenu -->
+								<txp:if_article_list>
+									<div id="noticesmenu" class="box">
+										<h3>Notices</h3>
+										<div class="inbox gr">
+											<ul class="boxlist">
+												<txp:article_custom form="articlelistdate" allowoverride="0" section="notices" limit="3" />
+											</ul>
+										</div>
+										<!-- .inbox -->
+										<div class="more"><a href="<txp:site_url />notices">all notices</a></div>
+									</div>
+									<!-- #noticesmenu -->
 
-<div style='margin: 10px; text-align: center; width: 160px;'><div style='float: left;font-size:90%;'>Powered by <a href='http://www.rollyo.com/'>Rollyo</a>:</div><form action='http://www.rollyo.com/search.html'><fieldset id='searchboxset' style='margin: 0 0 10px 0 !important; padding: 4px 0 0 0 !important; height: 62px; width: 160px; border: none;'><input type='text' size='30' style='background: #fff; font-family: helvetica, arial, sans-serif; color: #000; font-weight: normal; float: left; width: 108px; height: 14px; margin: 3px 0 4px 0px !important; font-size: 13px !important; vertical-align: middle;' name='q' value="" /><input type='image' src='http://rollyo.com/remote/btn-togo-search-ph2.png' alt='Go' style='margin: 2px 0 0 3px !important; float: left; border: none;' /> <br /><select id='rolls' name='sid' style='float: left; width: 158px; margin: 0 0 2px 0 !important; font-size: 12px;'><option value='257950' selected='selected'>Select Search Engine...</option><option value='257950'>Textpattern Resources</option><option value='web'>Search The Web</option></select> <input type='hidden' name='togo-v' value='1' /><div id='about' style='font-family: Arial, Helvetica, sans-serif; font-size: 9px;'></div></fieldset></form></div>
-
-<div class="note">(This page is awaiting further development.  <a href="<txp:site_url />contact">Would you like to help?</a>)</div>
-</div><!-- #searchpageadvanced -->
-</txp:if_section>
-		</div><!-- #content -->
-	</div><!-- .incol -->
-</div><!-- #maincol -->
-<div id="col2">
-	<div class="incol">
-
-<txp:if_section name="admin">
-		<div id="noticesmenu" class="box">
-			<txp:zem_ir group="box">Admin stuff</txp:zem_ir>
-			<div class="inbox bl">
-				<ul class="boxlist">
-					<txp:if_article_list>
-						<txp:article_custom form="noticesmenu" allowoverride="0" section="admin" />
-					<txp:else />
-						<txp:article_custom form="articlelistdate" allowoverride="0" section="admin" />
-					</txp:if_article_list>
-				</ul>
-			</div><!-- .inbox -->
-		</div><!-- #noticesmenu -->
-</txp:if_section><!-- /admin section -->
-
-		<txp:if_section name="notices">
-		<div id="noticesmenu" class="box">
-			<txp:zem_ir group="box">Notices</txp:zem_ir>
-			<div class="inbox bl">
-				<ul class="boxlist">
-					<txp:if_article_list>
-						<txp:article_custom form="noticesmenu" allowoverride="0" section="notices" />
-					<txp:else />
-						<txp:article_custom form="articlelistdate" allowoverride="0" section="notices" />
-					</txp:if_article_list>
-				</ul>
-			</div><!-- .inbox -->
-		</div><!-- #noticesmenu -->
-		</txp:if_section>
-		<txp:if_section name="about,contact,misc">
-		<div id="aboutmenu" class="box">
-			<txp:zem_ir group="box">About Menu</txp:zem_ir>
-			<div class="inbox bl">
-				<ul class="boxlist">
-				<txp:if_article_list>
-<txp:mdn_if_section section="contact">
-					<txp:article_custom form="articlelist" allowoverride="0" section="about" />
-</txp:mdn_if_section>
-<txp:mdn_if_section notsection="contact">
-					<txp:article_custom form="aboutmenu" allowoverride="0" section="about" />
-</txp:mdn_if_section>
-<txp:article_custom id="683" form="titlelist" />
-				<txp:else />
-					<txp:article_custom form="articlelist" allowoverride="0" section="about" />
-<txp:article_custom id="683" form="titlelist" />
-				</txp:if_article_list>
-				</ul>
-			</div><!-- .inbox -->
-		</div><!-- #aboutmenu -->
-<txp:if_article_list>
-		<div id="noticesmenu" class="box">
-			<txp:zem_ir group="box">Notices</txp:zem_ir>
-			<div class="inbox gr">
-				<ul class="boxlist">
-					<txp:article_custom form="articlelistdate" allowoverride="0" section="notices" limit="3" />
-				</ul>
-			</div><!-- .inbox -->
-			<div class="more"><a href="<txp:site_url />notices">all notices</a></div>
-		</div><!-- #noticesmenu -->
-
-		<div id="disclaimer" class="box">
-			<txp:zem_ir group="box">Disclaimer</txp:zem_ir>
-			<p>Though this site is dedicated to Textpattern, it is not managed nor monitored in an 'official' capacity.</p>
-			<p>The content here is the community product of individual efforts; the copyright of anything you read here is individually theirs; the responsibility when using any of it is yours.</p>
-			<p>The official Textpattern site is at <a href="http://textpattern.com">textpattern.com</a>.</p>
-			<txp:anc_hide><txp:article id="1" /></txp:anc_hide>
-		</div><!-- #disclaimer -->
-</txp:if_article_list>
-		</txp:if_section>
-	</div><!-- .incol -->
-</div><!-- #col2 -->
-<txp:output_form form="footer" />
-</div><!-- #container -->
-<txp:output_form form="base" />
-</div><!-- #frame -->
-</div><!-- #inbody -->
-</div><!-- #indipage or #listpage -->
-</div><!-- #about -->
-<txp:output_form form="all_bottom" />
+									<div id="disclaimer" class="box">
+										<h3>Disclaimer</h3>
+										<p>Though this site is dedicated to Textpattern, it is not managed nor monitored in an 'official' capacity.</p>
+										<p>The content here is the community product of individual efforts; the copyright of anything you read here is individually theirs; the responsibility when using any of it is yours.</p>
+										<p>The official Textpattern site is at <a href="http://textpattern.com">textpattern.com</a>.</p>
+										<txp:hide>
+											<txp:article id="1" /></txp:hide>
+									</div>
+									<!-- #disclaimer -->
+								</txp:if_article_list>
+							</txp:if_section>
+						</div>
+						<!-- .incol -->
+					</div>
+					<!-- #col2 -->
+					<txp:output_form form="footer" />
+				</div>
+				<!-- #container -->
+				<txp:output_form form="base" />
+			</div>
+			<!-- #frame -->
+		</div>
+		<!-- #inbody -->
+		</div>
+		<!-- #indipage or #listpage -->
+		</div>
+		<!-- #about -->
+		<txp:output_form form="all_bottom" />
 </body>
+
 </html>

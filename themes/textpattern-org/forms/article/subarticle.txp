@@ -1,16 +1,23 @@
 <div class="subarticle" id="a<txp:article_id />">
-<h5><txp:permlink><txp:title /></txp:permlink></h5>
-		<txp:mdn_if_custom field="1" notempty="1"><h4><txp:rei_show_custom customid="1" /></h4></txp:mdn_if_custom>
+	<h5><txp:permlink><txp:title /></txp:permlink></h5>
+	<txp:if_custom_field name="plugin_description">
+		<h4><txp:custom_field name="plugin_description" /></h4>
+	</txp:if_custom_field>
 
-			<txp:if_article_list>
-				<txp:if_excerpt>
-					<txp:excerpt />
-				<txp:else />
-					<txp:body />
-				</txp:if_excerpt>
-			<txp:else />
-				<txp:body />
-			</txp:if_article_list>
-<txp:rss_article_edit>[edit]</txp:rss_article_edit>
-			<br class="ab" />
-</div><!-- .article -->
+	<txp:if_article_list>
+		<txp:if_excerpt>
+			<txp:excerpt />
+		<txp:else />
+			<txp:body />
+		</txp:if_excerpt>
+	<txp:else />
+		<txp:body />
+	</txp:if_article_list>
+	<txp:if_individual_article>
+		<txp:if_logged_in>
+			<a href="<txp:site_url type="admin" />?event=article&step=edit&ID=<txp:article_id />">[edit]</a>
+		</txp:if_logged_in>
+	</txp:if_individual_article>
+	<br class="ab" />
+</div>
+<!-- .article -->

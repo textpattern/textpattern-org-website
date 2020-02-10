@@ -1,31 +1,47 @@
-<txp:ras_enable_articles days="2.5">
-<txp:if_different><txp:zem_ir group="box">Notices</txp:zem_ir></txp:if_different>
+<txp:etc_if_date date="posted" compare="now..+5 days" format="%F">
+	<txp:if_first_article>
+		<h3>Notices</h3>
+	</txp:if_first_article>
 
-<div class="article anotice main" id="a<txp:article_id />"><div class="inarticle">
+	<div class="article anotice main" id="a<txp:article_id />">
+		<div class="inarticle">
 
-<div class="articlekey" style="font-size:90%;">
-<txp:anc_hide><txp:if_different>	<div class="atype"><txp:section link="y" title="1" /></div></txp:if_different></txp:anc_hide>
+			<div class="articlekey">
+<txp:hide>
+				<txp:if_different>
+					<div class="atype">
+						<txp:section link="1" title="1" />
+					</div>
+				</txp:if_different>
+</txp:hide>
 
-	<div class="apost"><txp:if_different><txp:posted format="%b. %d" />, </txp:if_different><txp:posted format="%I:%M %p" /></div>
+				<div class="apost">
+					<txp:if_different>
+						<txp:posted format="%b. %d" />,
+					</txp:if_different>
+					<txp:posted format="%I:%M %p" />
+				</div>
 
-</div><!-- .articlekey -->
+			</div>
+			<!-- .articlekey -->
 
-<h2><txp:permlink><txp:title /></txp:permlink></h2>
+			<h2><txp:permlink><txp:title /></txp:permlink></h2>
+			<txp:custom_field name="plugin_description" wraptag="h4" />
 
-<txp:rvm_if expr="custom_1"><h4><txp:rei_show_custom customid="1" /></h4></txp:rvm_if>
+			<div class="abody">
+				<txp:if_excerpt>
+					<txp:excerpt />
+				<txp:else />
+					<txp:smd_wrap_all wraptag="p" transform="strip_tags, cut|350|15w|&hellip;"><txp:body /></txp:smd_wrap_all>
+				</txp:if_excerpt>
+				<txp:permlink wraptag="div" class="more">more details &gt;</txp:permlink>
+				<br class="ab" />
+			</div>
+			<!-- .abody -->
 
-<div class="abody">
+		</div>
+		<!-- .inarticle -->
 
-<txp:if_excerpt>
-<txp:excerpt />
-<div class="more"><txp:permlink>more details &gt;</txp:permlink></div>
-<txp:else />
-  <txp:rss_auto_excerpt length="350" linktext="more details &gt;" ending="..." linkwraptag="div" linkclass="more" />
-</txp:if_excerpt>
-
-<br class="ab" />
-</div><!-- .abody -->
-</div><!-- .inarticle -->
-
-</div><!-- .article -->
-</txp:ras_enable_articles>
+	</div>
+	<!-- .article -->
+</txp:etc_if_date>

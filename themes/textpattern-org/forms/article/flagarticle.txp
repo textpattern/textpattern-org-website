@@ -1,17 +1,23 @@
-<div class="flaghead">Flag this article:</div><br />
+<div class="flaghead">Flag this article:</div>
+<br/>
+<div class="flagreaplain">
+    <div class="flagreason">
+        <txp:com_connect_select label="Reason" list=",orphaned file,broken link,inaccurate information,outdated,other"/>
+    </div>
+    <div class="flagexplain">
+        <txp:com_connect_textarea rows="2" required="1" break="" label="Explanation"/>
+    </div>
+</div>
 
-<div class="flagreaplain"><div class="flagreason">
-<txp:zem_contact_select label="Reason" list=",orphaned file,broken link,inaccurate information,outdated,other" /></div>
+<div class="flagname">Optional:<br/>
+    <txp:com_connect_text label="Your Name" required="0" break=""/>
+    <txp:com_connect_email required="0" break=""/>
+</div>
 
-<div class="flagexplain">
-<txp:zem_contact_textarea rows="2" required="1" break="" label="Explanation" /></div></div>
+<txp:com_connect_secret label="Edit link">
+    http://textpattern.org/textpattern/index.php?event=article&step=edit&ID=<txp:article_id/>
+</txp:com_connect_secret>
 
-<div class="flagname">Optional:<br />
-<txp:zem_contact_text label="Your Name" required="0" break="" />
-<txp:zem_contact_email required="0" break="" /></div>
-
-<txp:zem_contact_secret label="Edit link">
-http://textpattern.org/textpattern/index.php?event=article&step=edit&ID=<txp:article_id />
-</txp:zem_contact_secret>
-
-<txp:zem_contact_submit><strong>Flag</strong></txp:zem_contact_submit>
+<txp:com_connect_submit>
+    <strong>Flag</strong>
+</txp:com_connect_submit>

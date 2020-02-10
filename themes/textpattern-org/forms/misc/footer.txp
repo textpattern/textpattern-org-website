@@ -5,7 +5,7 @@
 	<div id="footnav">
 	<ul id="foot1">
 		<li><txp:link_to_home>Home</txp:link_to_home></li>
-	
+
 		<li><txp:section link="1" title="1" name="plugins" /></li>
 		<li><txp:section link="1" title="1" name="mods" /></li>
 		<li><txp:section link="1" title="1" name="tips" /></li>
@@ -16,20 +16,22 @@
 	</ul>
 
 <div id="sec">
- &middot; 
+ &middot;
 <a href="<txp:site_url />admin">admin</a>
-</div>	
+</div>
 
 	<ul id="foot2">	<li><a href="<txp:site_url />textpattern">Log In</a></li>
-<txp:anc_hide>		<li><a href="#">Sitemap</a></li></txp:anc_hide>
+<txp:hide>		<li><a href="#">Sitemap</a></li></txp:hide>
 		<li><a href="<txp:site_url />help">Help</a></li>
 <li><a href="<txp:site_url />notices">Notices</a></li>
 <li><a href="<txp:site_url />links">Links</a></li>
+<txp:hide>
 <li><a href="<txp:site_url />comments">Comments</a></li>
+</txp:hide>
 <li><a href="<txp:site_url />tags">Tags</a></li>
 
-		<li><txp:feed_link sitewide="y" flavor="rss" label="RSS" /> and <txp:feed_link sitewide="y" flavor="atom" label="Atom" /> Feeds</li>
-<txp:anc_hide>		<li><a href="#">Email Updates</a></li></txp:anc_hide>
+		<li><txp:feed_link flavor="rss" label="RSS" /> and <txp:feed_link flavor="atom" label="Atom" /> Feeds</li>
+<txp:hide>		<li><a href="#">Email Updates</a></li></txp:hide>
 <li><a href="<txp:site_url />contact">Contact</a></li>
 	</ul>
 	</div><!-- #footnav -->

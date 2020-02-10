@@ -3,7 +3,7 @@
 	<label for="message">Your comment <span class="cnote">(public)</span></label>
 <txp:comment_message_input />
 <txp:hak_textile_tag />
-<div class="cnote fl"><a href="http://textile.thresholdstate.com/">textile on</a> <txp:anc_hide><span class="helpnote"><a href="#">[ ? ]</a></span></txp:anc_hide></div>
+<div class="cnote fl"><a href="http://textile.thresholdstate.com/">textile on</a> <txp:hide><span class="helpnote"><a href="#">[ ? ]</a></span></txp:hide></div>
 <div class="cnote r"><a href="http://www.gravatar.com/">gravatars on</a></div>
 
 <label for="comment_name_input">Name <span class="cnote">(required, public)</span></label>
@@ -22,7 +22,7 @@
 <txp:if_comments_preview>
 <div class="cnote">Your comment has NOT yet been submitted.  You may preview it again, or submit it when you're ready.</div>
 <txp:else />
-<div class="cnote">Your comment will NOT be submitted until you click the 'Submit' button on the next pageload. <txp:anc_hide><span class="helpnote"><a href="#help">[ ? ]</a></span></txp:anc_hide></div>
+<div class="cnote">Your comment will NOT be submitted until you click the 'Submit' button on the next pageload. <txp:hide><span class="helpnote"><a href="#help">[ ? ]</a></span></txp:hide></div>
 </txp:if_comments_preview>
 
 <div class="button"><txp:comment_submit /></div>

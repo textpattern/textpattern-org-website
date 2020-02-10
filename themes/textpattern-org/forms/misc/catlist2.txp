@@ -1,6 +1,6 @@
 	<div id="catlist" class="box">
 
-<div class="wraphb"><txp:zem_ir group="boxar">by Category</txp:zem_ir></div>
+<div class="wraphb"><h3>by Category</h3></div>
 
 <txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods"  showcatcount="1" showcatsonly="1" showzerocount="0" showheader="0" linktosection="categoryarchive" />
 

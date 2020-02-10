@@ -1,25 +1,25 @@
 <div id="col1">
 	<div class="incol">
-	
+
 	<txp:output_form form="login" />
-	
+
 
 	<div id="welcome" class="box">
-	<txp:zem_ir group="box">Welcome</txp:zem_ir>
+	<h3>Welcome</h3>
 		<div class="inbox">
 			<p>Welcome to the Textpattern Resources site.</p>
-			<p>The <a href="<txp:site_url />archives">Archives</a> are really useful.<br /> Browse by <a href="<txp:site_url />archives">section</a>, <a href="<txp:site_url />categoryarchive">category</a> or <a href="<txp:site_url />datearchive">date</a><txp:anc_hide>or <a href="<txp:site_url />authorarchive">author</a></txp:anc_hide>, or consult the <a href="<txp:site_url />tags">tag clouds</a>.</p>
+			<p>The <a href="<txp:site_url />archives">Archives</a> are really useful.<br /> Browse by <a href="<txp:site_url />archives">section</a>, <a href="<txp:site_url />categoryarchive">category</a> or <a href="<txp:site_url />datearchive">date</a><txp:hide>or <a href="<txp:site_url />authorarchive">author</a></txp:hide>, or consult the <a href="<txp:site_url />tags">tag clouds</a>.</p>
 			<p>Looking for the <a href="http://textpattern.com">main Textpattern site</a>?  Or <a href="<txp:site_url />links">other relevant sites</a>?</p>
-			<p>Do you need <a href="<txp:site_url />help">help?</a></p>  <txp:anc_hide>Like <a href="<txp:site_url />help#a679">instructions</a> for installing plugins, templates, etc.?</a>  <br /><a href="<txp:site_url />help">FAQ</a> is where it's at.</p></txp:anc_hide>
+			<p>Do you need <a href="<txp:site_url />help">help?</a></p>  <txp:hide>Like <a href="<txp:site_url />help#a679">instructions</a> for installing plugins, templates, etc.?</a>  <br /><a href="<txp:site_url />help">FAQ</a> is where it's at.</p></txp:hide>
 			<p>3..2..1.. <a href="<txp:site_url />about#contact">Contact</a>!</p>
-<txp:anc_hide>			<p>There are also various <a href="<txp:site_url />feeds">RSS/Atom feed options</a> or plain <a href="#">email subscription</a>.</p>
-			<p>Hosted happily at <a href="http://textdrive.com">TextDrive</a>.</p></txp:anc_hide>
+<txp:hide>			<p>There are also various <a href="<txp:site_url />feeds">RSS/Atom feed options</a> or plain <a href="#">email subscription</a>.</p>
+			<p>Hosted happily at <a href="http://textdrive.com">TextDrive</a>.</p></txp:hide>
 		</div><!-- .inbox -->
 	</div><!-- #boxwelcome -->
 
 <txp:hide>
 	<div id="recentcomments" class="box">
-	<txp:zem_ir group="box">Recent Comments</txp:zem_ir>
+	<h3>Recent Comments</h3>
 		<div class="inbox">
 <txp:asv_recent_comments limit="3" wraptag="ul" break="" form="recent_comments" />
 <div class="more"><a href="<txp:site_url />comments">more comments</a></div>
@@ -28,7 +28,7 @@
 </txp:hide>
 
 	<div id="recentcomments" class="box">
-	<txp:zem_ir group="box">Top rated</txp:zem_ir>
+	<h3>Top rated</h3>
 		<div class="inbox">
 <span class="note">These articles currently hold the most "helpful" ratings:</span>
 <txp:wlk_helpful_list />

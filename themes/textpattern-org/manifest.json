@@ -1,7 +1,7 @@
 {
     "title": "Textpattern Plugins Website",
-    "version": "4.7.1",
-    "description": "",
+    "version": "4.7.2",
+    "description": "TRV2 textpattern.org templates updated for Textpattern v4.7",
     "author": "Team Textpattern",
     "author_uri": "https://textpattern.com/",
     "txp-type": "textpattern-theme"

@@ -1,44 +1,59 @@
 <div class="article" id="a<txp:article_id />">
 	<div class="inarticle">
-<txp:if_article_list>
-<h2><txp:permlink><txp:title /></txp:permlink></h2>
-<txp:else />
-<h2 class="stat"><txp:title /></h2>
-</txp:if_article_list>
-		<txp:mdn_if_custom field="1" notempty="1"><h4><txp:rei_show_custom customid="1" /></h4></txp:mdn_if_custom>
-		<txp:mdn_if_section section="notices">
+		<txp:if_article_list>
+			<h2><txp:permlink><txp:title /></txp:permlink></h2>
+		<txp:else />
+			<h2 class="stat"><txp:title /></h2>
+		</txp:if_article_list>
+		<txp:if_custom_field name="plugin_description">
+			<txp:custom_field name="plugin_description" wraptag="h4" escape="" />
+		</txp:if_custom_field>
+		<txp:if_section name="notices">
 			<h4 class="apost"><txp:posted format="%A %e %B %Y at %H:%M %p" /></h4>
-		</txp:mdn_if_section>
+		</txp:if_section>
 		<div class="abody">
 			<txp:if_article_list>
 				<txp:if_excerpt>
 					<txp:excerpt />
-					<div class="more"><txp:permlink>...continued <txp:if_comments><span class="note"> [<txp:comments_count />] </span></txp:if_comments>&gt;</txp:permlink></div><br />
+					<div class="more">
+						<txp:permlink>...continued
+							<txp:if_comments><span class="note"> [<txp:comments_count />] </span></txp:if_comments>&gt;
+						</txp:permlink>
+					</div><br />
 				<txp:else />
 					<txp:body />
 				</txp:if_excerpt>
 			<txp:else />
 				<txp:body />
 			</txp:if_article_list>
-			<txp:mdn_if_section section="notices">
+			<txp:if_section name="notices">
 				<cite>~ <txp:author link="0" this_section="0" /></cite>
-			</txp:mdn_if_section>
-<txp:rss_article_edit>[edit]</txp:rss_article_edit>
+			</txp:if_section>
+			<txp:if_individual_article>
+			    <txp:if_logged_in>
+			        <a href="<txp:site_url type="admin" />?event=article&step=edit&ID=<txp:article_id />">[edit]</a>
+			    </txp:if_logged_in>
+			</txp:if_individual_article>
 
 			<div class="jump">
-<txp:if_article_list>
-<a href="#top">hop to #top / About menu</a>
-<txp:else />
-<txp:permlink>permanent link</txp:permlink>
-</txp:if_article_list>
+				<txp:if_article_list>
+					<a href="#top">hop to #top / About menu</a>
+				<txp:else />
+					<txp:permlink>permanent link</txp:permlink>
+				</txp:if_article_list>
 			</div>
 
-
 			<br class="ab" />
-		</div><!-- .abody -->
-	</div><!-- .inarticle -->
-
-<txp:if_individual_article>
-<txp:output_form form="comments" />
-</txp:if_individual_article>
-</div><!-- .article -->
+		</div>
+		<!-- .abody -->
+	</div>
+	<!-- .inarticle -->
+<txp:hide>
+	<txp:if_individual_article>
+		<txp:if_comments>
+			<txp:output_form form="comments" />
+		</txp:if_comments>
+	</txp:if_individual_article>
+</txp:hide>
+</div>
+<!-- .article -->

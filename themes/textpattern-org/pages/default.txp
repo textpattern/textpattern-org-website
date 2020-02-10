@@ -1,65 +1,105 @@
 <txp:output_form form="head" />
+
 <body id="top">
-<txp:output_form form="inbody" />
+	<txp:output_form form="inbody" />
 
-<txp:glx_if_frontpage><div id="main"></txp:glx_if_frontpage>
-<txp:if_search><div id="list"></txp:if_search>
-<txp:if_category><div id="list"><div id="scatpage"></txp:if_category>
-<div id="s<txp:section />page">
-<div id="inbody">
-<div id="frame">
+	<txp:if_section name="default">
+		<txp:if_article_list type="author, c, month, pg, q" not>
+		<div id="main">
+		</txp:if_article_list>
+	</txp:if_section>
+	<txp:if_search>
+		<div id="list">
+	</txp:if_search>
+	<txp:if_category>
+		<div id="list">
+			<div id="scatpage">
+	</txp:if_category>
+	<div id="s<txp:section />page">
+		<div id="inbody">
+			<div id="frame">
 
-<div id="container">
+				<div id="container">
 
-<txp:output_form form="header" />
-<txp:output_form form="accessibility" />
-<txp:output_form form="mainnav" />
-<txp:output_form form="window" />
+					<txp:output_form form="header" />
+					<txp:output_form form="accessibility" />
+					<txp:output_form form="mainnav" />
+					<txp:output_form form="window" />
 
-<txp:if_category>
-<txp:output_form form="breadcrumbs" />
-</txp:if_category>
+					<txp:if_category>
+						<txp:output_form form="breadcrumbs" />
+					</txp:if_category>
 
-<div id="maincol">
-	<div class="incol">
-	<div id="content">
+					<div id="maincol">
+						<div class="incol">
+							<div id="content">
 
-<txp:if_search><txp:output_form form="searchpage" /></txp:if_search>
-<txp:if_category><txp:output_form form="catpage" /></txp:if_category>
+								<txp:if_search>
+									<txp:output_form form="searchpage" />
+								</txp:if_search>
+								<txp:if_category>
+									<txp:output_form form="catpage" />
+								</txp:if_category>
+								<txp:if_section name="default">
+									<txp:if_article_list type="author, c, month, pg, q" not>
+										<txp:output_form form="box-recent" />
+									</txp:if_article_list>
+								</txp:if_section>
 
-<txp:glx_if_frontpage><txp:output_form form="box-recent" /></txp:glx_if_frontpage>
+							</div>
+							<!-- #content -->
 
-	</div><!-- #content -->
+							<txp:if_section name="default">
+								<txp:if_article_list type="author, c, month, pg, q" not>
+									<div class="archiveoffer">
+										All <txp:article_custom section="mods,plugins,templates,tips,tutorials" pageby="1" pgonly /> articles are stored in the treasure rooms that are the <a href="<txp:site_url />archives">Directory/Archives</a>.
+									</div>
+								</txp:if_article_list>
+							</txp:if_section>
 
-<txp:glx_if_frontpage>
-	<div class="archiveoffer">All <txp:mdn_count section="mods,plugins,templates,tips,tutorials" /> articles are stored in the treasure rooms that are the <a href="<txp:site_url />archives">Directory/Archives</a>.</div>
-</txp:glx_if_frontpage>
+						</div>
+						<!-- .incol -->
+					</div>
+					<!-- #maincol -->
 
-	</div><!-- .incol -->
-</div><!-- #maincol -->
+					<txp:if_section name="default">
+						<txp:if_article_list type="author, c, month, pg, q" not>
+							<txp:output_form form="frontpage-welcome" />
+						</txp:if_article_list>
+					</txp:if_section>
 
-<txp:glx_if_frontpage><txp:output_form form="frontpage-welcome" /></txp:glx_if_frontpage>
+					<!-- col2 -->
+					<div id="col2">
+						<div class="incol">
 
-<!-- col2 -->
-	<div id="col2">
-	<div class="incol">
+							<txp:output_form form="search" />
+							<txp:output_form form="catlist" />
 
-<txp:output_form form="search" />
-<txp:output_form form="catlist" />
+						</div>
+						<!-- .incol -->
+					</div>
+					<!-- #col2 -->
 
-	</div><!-- .incol -->
-	</div><!-- #col2 -->
+					<txp:output_form form="footer" />
 
-<txp:output_form form="footer" />
+				</div>
+				<!-- #container -->
 
-</div><!-- #container -->
+				<txp:output_form form="base" />
 
-<txp:output_form form="base" />
-
-</div><!-- #frame -->
-</div><!-- #inbody -->
-</div><!-- #ssectionpage -->
-</div><!-- #main or #page or #list --><txp:if_category></div><!-- #scatpage --></txp:if_category>
-<txp:output_form form="all_bottom" />
+			</div>
+			<!-- #frame -->
+		</div>
+		<!-- #inbody -->
+	</div>
+	<!-- #ssectionpage -->
+	</div>
+	<!-- #main or #page or #list -->
+	<txp:if_category>
+		</div>
+		<!-- #scatpage -->
+	</txp:if_category>
+	<txp:output_form form="all_bottom" />
 </body>
+
 </html>

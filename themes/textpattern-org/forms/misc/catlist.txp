@@ -1,64 +1,57 @@
-		<txp:if_article_list>
-				<div id="catlist" class="box">
-<txp:glx_if_frontpage>
-		<txp:zem_ir group="box">Categories</txp:zem_ir>
-<txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods" showcatcount="0" showcatsonly="1" showheader="0" linktosection="categoryarchive" />
-</txp:glx_if_frontpage>
+<txp:if_article_list>
+	<div id="catlist" class="box">
+
+<txp:if_section name="default">
+	<txp:if_article_list type="author, c, month, pg, q" not>
+		<h3>Categories</h3>
+		<txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods" showcatcount="0" showcatsonly="1" showheader="0" linktosection="categoryarchive" />
+	</txp:if_article_list>
+</txp:if_section>
 
 <txp:if_search>
-		<txp:zem_ir group="box">Categories</txp:zem_ir>
-<txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods" showcatcount="1" showcatsonly="1" showheader="0" linktosection="categoryarchive" />
+	<h3>Categories</h3>
+	<txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods" showcatcount="1" showcatsonly="1" showheader="0" linktosection="categoryarchive" />
 </txp:if_search>
 
-<txp:if_section name="categoryarchive,archives,authorarchive">
-<txp:else />
-<txp:mdn_if_section section="default">
-<txp:if_category>
-		<txp:zem_ir group="box">Categories</txp:zem_ir>
-<txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods" showcatcount="1" showcatsonly="1" showheader="0" this_section="1" /></txp:if_category>
-</txp:mdn_if_section>
+<txp:if_section name="categoryarchive,archives,authorarchive" not>
 
-<txp:mdn_if_section notsection="default">
-<txp:if_category>
-		<txp:zem_ir group="box" wrap="275"><txp:section title="1" /> Categories</txp:zem_ir>
+	<txp:if_section name="default">
+		<txp:if_category>
+			<h3>Categories</h3>
+			<txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods" showcatcount="1" showcatsonly="1" showheader="0" this_section="1" />
+		</txp:if_category>
 
-<txp:rss_suparchive_bycat showcatcount="1" showcatsonly="1" showheader="0" this_section="1" />
+	<txp:else />
 
-</txp:if_category>
-</txp:mdn_if_section>
+		<txp:if_category>
+			<h3><txp:section title="1" /> Categories</h3>
+			<txp:rss_suparchive_bycat showcatcount="1" showcatsonly="1" showheader="0" this_section="1" />
+		</txp:if_category>
+
+	</txp:if_section>
+
 </txp:if_section>
 
-
-<txp:mdn_if_section section="links">
-	<txp:zem_ir group="box" wrap="275">Links categories</txp:zem_ir>
-<txp:rss_linkcat_list linktosection="links" showcount="1" />
-</txp:mdn_if_section>
-
-<txp:glx_if_not_frontpage>
-<txp:if_section name="default">
-
-<txp:zem_ir group="box">Categories</txp:zem_ir>
-<txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods" showcatcount="1" showcatsonly="1" showheader="0" />
+<txp:if_section name="links">
+	<h3>Links categories</h3>
+	<txp:rss_linkcat_list linktosection="links" showcount="1" />
 </txp:if_section>
 
+<txp:if_section name="default,archives,categoryarchive,authorarchive,datearchive,links,tags,state" not>
+	<h3><txp:section title="1" /> Categories</h3>
+	<txp:rss_suparchive_bycat this_section="1" showcatcount="1" showcatsonly="1" showzerocount="0" showheader="0" />
+</txp:if_section>
 
-<txp:mdn_if_section notsection="archives,categoryarchive,authorarchive,datearchive,links,tags,state">
-		<txp:zem_ir group="box" wrap="275"><txp:section title="1" /> Categories</txp:zem_ir>
+<txp:if_section name="archives,categoryarchive,authorarchive,datearchive,state">
+	<div class="wraphb"><h3>by Category</h3></div>
+	<txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods" showcatcount="1" showcatsonly="1" showzerocount="0" showheader="0" linktosection="categoryarchive" />
+</txp:if_section>
 
-<txp:rss_suparchive_bycat this_section="1" showcatcount="1" showcatsonly="1" showzerocount="0" showheader="0" />
-</txp:mdn_if_section>
+<txp:hide>
+	<div class="boxnote">
+		<a href="#">Category definitions <span class="helpnote">[ ? ]</span></a>
+	</div><!-- .randomnote -->
+</txp:hide>
 
-
-<txp:ob1_if_section section="archives,categoryarchive,authorarchive,datearchive,state">
-<div class="wraphb"><txp:zem_ir group="boxar">by Category</txp:zem_ir></div>
-
-<txp:rss_suparchive_bycat section="plugins,tutorials,tips,templates,mods" showcatcount="1" showcatsonly="1" showzerocount="0" showheader="0" linktosection="categoryarchive" />
-</txp:ob1_if_section>
-
-<txp:anc_hide><div class="boxnote">
-<a href="#">Category definitions <span class="helpnote">[ ? ]</span></a>
-</div><!-- .randomnote --></txp:anc_hide>
-
-</txp:glx_if_not_frontpage>
-		</div><!-- #catlist -->
-		</txp:if_article_list>
+</div><!-- #catlist -->
+</txp:if_article_list>

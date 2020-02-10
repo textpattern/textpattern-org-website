@@ -1,5 +1,5 @@
 		<div id="mainlinks" class="box">
-		<txp:zem_ir group="box">Main Links</txp:zem_ir>
+		<h3>Main Links</h3>
 <ul class="boxlist">
 	<li><a href="http://textpattern.com/">Main site</a></li>
 	<li><a href="http://textpattern.com/weblog">Weblog</a></li>

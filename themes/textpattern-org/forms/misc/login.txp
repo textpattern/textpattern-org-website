@@ -1,10 +1,15 @@
 <div id="login" class="box">
-	<txp:zem_ir group="box">Login</txp:zem_ir>
-		<div class="inbox">
-			<p><span class="login"><a href="<txp:site_url />textpattern">Sign in</a> or <a href="<txp:site_url />register">Register</a></span><br /><txp:glx_if_frontpage><br />
-			to add or edit entries
-<txp:else />
-<a href="<txp:site_url />help#a684">What is this for?</a>
-</txp:glx_if_frontpage> </p>
-		</div><!-- .inbox -->
-	</div><!-- #boxlogin -->
+	<h3>Login</h3>
+	<div class="inbox">
+
+		<p><span class="login"><a href="<txp:site_url />textpattern">Sign in</a> or <a href="<txp:site_url />register">Register</a></span><br />
+			<txp:if_section name="default">
+				<txp:if_article_list type="author, c, month, pg, q" not>
+					<br>to add or edit entries
+				</txp:if_article_list>
+			<txp:else />
+				<a href="<txp:site_url />help#a684">What is this for?</a>
+			</txp:if_section>
+
+	</div><!-- .inbox -->
+</div><!-- #boxlogin -->

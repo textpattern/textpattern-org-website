@@ -1,17 +1,21 @@
 	<div id="window">
-		<txp:glx_if_frontpage>
-		<div class="maincol">Also visit the <a href="http://textpattern.com/">Textpattern CMS homepage</a>, <a href="http://forum.textpattern.com/">forums</a>, <a href="http://textpattern.net/">documentation</a>, <a href="<txp:site_url />links">etc.</a></div>
-		<div class="col1"><txp:anc_hide>November 6 - <txp:zem_link href="699">Editor's note</txp:zem_link><txp:zem_link href="985">Adopt orphaned files</txp:zem_link></txp:anc_hide></div>
-		</txp:glx_if_frontpage>
 
-		<txp:glx_if_not_frontpage>
-	<div class="maincol"><txp:article_custom limit="1" form="moddate" allowoverride="0" /></div>
-<txp:ob1_if_section section="!help,!archives">
-	<div class="col1">Need 	<a href="<txp:site_url />help">help <span class="helpnote">[ ? ]</span></a></div>
-</txp:ob1_if_section>
-		</txp:glx_if_not_frontpage>
-		
-		<div class="col2">hop to <a href="#bottom">#bottom</a></div>
+		<txp:if_section name="default">
+			<txp:if_article_list type="author, c, month, pg, q" not>
+				<div class="maincol">Also visit the <a href="http://textpattern.com/">Textpattern CMS homepage</a>, <a href="http://forum.textpattern.com/">forums</a>, <a href="http://textpattern.net/">documentation</a>, <a href="<txp:site_url />links">etc.</a></div>
+				<div class="col1"><txp:hide>November 6 - <txp:permlink id="699">Editor's note</txp:permlink><txp:permlink id="985">Adopt orphaned files</txp:permlink></txp:hide></div>
+			</txp:if_article_list>
 
-<txp:anc_hide><div class="topnotice"><txp:zem_link href="985">Help adopt</txp:zem_link> orphaned files</div></txp:anc_hide>
+		<txp:else />
+
+			<div class="maincol"><txp:article_custom limit="1" form="moddate" allowoverride="0" /></div>
+			<txp:if_section name="help,archives" not>
+				<div class="col1">Need <a href="<txp:site_url />help">help <span class="helpnote">[ ? ]</span></a></div>
+			</txp:if_section>
+
+		</txp:if_section>
+
+		<div class="col2 hop-to-bottom">hop to <a href="#bottom">#bottom</a></div>
+
+<txp:hide><div class="topnotice"><txp:permlink id="985">Help adopt</txp:permlink> orphaned files</div></txp:hide>
 	</div><!-- #window -->

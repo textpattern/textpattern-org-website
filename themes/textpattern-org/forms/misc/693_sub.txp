@@ -10,4 +10,4 @@
 
   <txp:article_custom id="709" allowoverride="0" form="subarticle" />
 
-<txp:anc_hide>add id to .breadcrumbs</txp:anc_hide>
+<txp:hide>add id to .breadcrumbs</txp:hide>

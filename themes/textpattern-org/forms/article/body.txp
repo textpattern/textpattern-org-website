@@ -1,11 +1,12 @@
 <txp:if_article_list>
-<txp:if_excerpt>
-<txp:excerpt />
-<div class="more"><txp:permlink>...continued &rarr;</txp:permlink></div>
-<txp:else />
-<txp:body />
-</txp:if_excerpt>
-
-<txp:else />
-<txp:body />
+    <txp:if_excerpt>
+        <txp:excerpt/>
+        <div class="more">
+            <txp:permlink>...continued &rarr;</txp:permlink>
+        </div>
+    <txp:else/>
+        <txp:body/>
+    </txp:if_excerpt>
+<txp:else/>
+    <txp:body/>
 </txp:if_article_list>

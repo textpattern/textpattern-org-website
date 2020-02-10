@@ -1,18 +1,27 @@
 <div class="article asearch" id="a<txp:article_id />">
-<div class="inarticle">
+	<div class="inarticle">
 
-<div class="articlekey">
-	<div class="atype"><txp:section link="y" title="1" /></div>
-<small>edited <txp:ob1_modified format="j M Y" /></small>
+		<div class="articlekey">
+			<div class="atype">
+				<txp:section link="1" title="1" />
+			</div>
+			<small>edited <txp:modified format="%e %b %Y" /></small>
+		</div>
+
+		<h2><txp:permlink><txp:title /></txp:permlink></h2>
+
+		<div class="abody">
+			<p>
+				<txp:search_result_excerpt />
+			</p>
+
+			<div class="articlefoot">
+				<txp:permlink><txp:permlink /></txp:permlink>
+			</div>
+		</div>
+		<!-- .abody -->
+
+	</div>
+	<!-- .inarticle -->
 </div>
-
-<h2><txp:permlink><txp:title /></txp:permlink></h2>
-
-<div class="abody">
-<p><txp:search_result_excerpt /></p>
-
-<div class="articlefoot"><txp:permlink><txp:permlink /></txp:permlink></div>
-</div><!-- .abody -->
-
-</div><!-- .inarticle -->
-</div><!-- .article -->
+<!-- .article -->

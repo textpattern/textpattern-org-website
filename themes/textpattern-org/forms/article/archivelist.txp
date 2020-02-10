@@ -1,11 +1,41 @@
-<txp:if_different><li class="noli"><h2><a href="<txp:site_url />archives/?section=<txp:section title="0" />"><txp:section title="1" /></a></h2></li>
+<txp:if_different>
+    <li class="noli">
+        <h2>
+            <a href="<txp:site_url />archives/?section=<txp:section title="0" />"><txp:section title="1" /></a>
+        </h2>
+    </li>
 </txp:if_different>
 
-<txp:zem_nth step="1" of="2"><li class="a"></txp:zem_nth><txp:zem_nth step="2" of="2"><li class="b"></txp:zem_nth>
-<txp:permlink><txp:title /></txp:permlink> <span class="arcat"> 
+<li class="a">
+    <txp:permlink>
+        <txp:title />
+    </txp:permlink>
+    <span class="arcat">
 
-<txp:rvm_if expr="custom_9"><span class="statusmsg">[archived]</span>  &middot; <!-- status -->
-</txp:rvm_if>
+        <txp:if_custom_field name="state">
+            <span class="statusmsg">[archived]</span>
+            &middot;
+            <!-- status -->
+        </txp:if_custom_field>
 
-  <span class="ardate"><txp:ob1_modified format="j M Y"  /></span>   &middot; <txp:rvm_if expr="category1 or category2"><txp:asy_showcat link="true" /></txp:rvm_if></span>
-<txp:mdn_if_custom field="1" notempty="1"><div class="ardesc"><txp:rei_show_custom /></div></txp:mdn_if_custom></li>
+    <span class="ardate"><txp:modified format="%e %b %Y" /></span>
+    &middot;
+    <txp:if_article_category>
+        <txp:if_article_category number="1">
+            <txp:if_article_category number="2">
+                <txp:category1 title link />,
+                <txp:category2 title link />
+            <txp:else />
+                <txp:category1 title link />
+            </txp:if_article_category>
+        <txp:else />
+            <txp:category2 title link />
+        </txp:if_article_category>
+    </txp:if_article_category>
+    </span>
+    <txp:if_custom_field name="plugin_description">
+        <div class="ardesc">
+            <txp:custom_field name="plugin_description" />
+        </div>
+    </txp:if_custom_field>
+</li>
